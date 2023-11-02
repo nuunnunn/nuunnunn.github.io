@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Archivo+Black&family=Black+Han+Sans&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400&family=Gasoek+One&family=Gowun+Batang&family=Grandiflora+One&family=Gugi&family=Hahmlet:wght@100&family=IBM+Plex+Sans+KR:wght@300&family=Lilita+One&family=Lobster&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@200;900&family=Orbit&family=Paytone+One&family=Prompt:wght@500&family=Titan+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #f9a42d;
+}
+
+@font-face {
+  font-family: "PartialSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RixInooAriDuriR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Minhye";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Minhye.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Se-hwa";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/Se-hwa.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Uiyeun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yuni_ddingddang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_11@1.0/Yuni_ddingddang.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ddakdandan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_03@1.0/Ddakdandan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretty_Left_handed";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_09@1.0/Pretty_Left_handed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SlowSlow";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/SlowSlow.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+#wrap {
+  width: 100%;
+  height: 100vh;
+  font-family: "RixInooAriDuriR";
+}
+
+.section {
+  background: #02554b;
+  width: 100%;
+  height: 100vh;
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 1000;
+  background: transparent;
+}
+.nav a {
+  font-size: 2rem;
+  font-family: "Agbalumo", sans-serif;
+}
+.nav .hamburger {
+  width: 20px;
+  height: 17px;
+  position: relative;
+  cursor: pointer;
+}
+.nav .hamburger span {
+  height: 2px;
+  background: #f9a42d;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+.nav .hamburger span:first-of-type {
+  top: 0;
+  right: 0;
+  width: 60%;
+  transition-delay: 0.1s;
+}
+.nav .hamburger span:nth-of-type(2) {
+  top: 48%;
+  right: 0;
+  width: 80%;
+}
+.nav .hamburger span:last-of-type {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.nav .hamburger.hover span:first-of-type {
+  width: 100%;
+}
+.nav .hamburger.hover span:nth-of-type(2) {
+  width: 100%;
+}
+.nav .hamburger.active span:first-of-type {
+  transform: translateY(7.2px) rotate(45deg);
+}
+.nav .hamburger.active span:nth-of-type(2) {
+  width: 0%;
+}
+.nav .hamburger.active span:last-of-type {
+  transform: translateY(-7.2px) rotate(-45deg);
+}
+
+.sec1 {
+  color: #f9a42d;
+}
+.sec1 .content {
+  width: 1600px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 130px 0 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sec1 .content .main_txt {
+  width: 70%;
+}
+.sec1 .content .main_txt p {
+  font-size: 1rem;
+  margin: 0px 0px -70px 10px;
+  font-family: "PartialSansKR-Regular";
+}
+.sec1 .content .main_txt h1 {
+  color: #fe4818;
+  font-size: 8.8rem;
+  padding-bottom: 30px;
+  font-family: "Agbalumo", sans-serif;
+}
+.sec1 .content .main_txt h1:first-of-type span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce 0.5s ease 2 alternate forwards;
+}
+.sec1 .content .main_txt h1:first-of-type span:not(:first-child) {
+  margin-left: -20px;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(6) {
+  margin-left: 0px;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(7) {
+  animation-delay: 0.5s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(8) {
+  animation-delay: 0.6s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(9) {
+  animation-delay: 0.7s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(10) {
+  margin-left: 0px;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(11) {
+  animation-delay: 0.8s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(12) {
+  animation-delay: 0.9s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(13) {
+  animation-delay: 1s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(14) {
+  animation-delay: 1.2s;
+}
+.sec1 .content .main_txt h1:first-of-type span:nth-child(15) {
+  animation-delay: 1.3s;
+}
+.sec1 .content .main_txt h1:first-of-type span:last-child {
+  animation-delay: 1.4s;
+}
+@keyframes bounce {
+  100% {
+    top: -20px;
+  }
+}
+.sec1 .content .main_txt h2 {
+  font-size: 2.5rem;
+  color: #f9a42d;
+  margin-left: 10px;
+  font-family: "Lilita One", sans-serif;
+}
+.sec1 .content .main_img {
+  width: 25%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sec1 .content .main_img .rotate_stars {
+  width: 210px;
+  height: 210px;
+  position: relative;
+}
+.sec1 .content .main_img .rotate_stars img {
+  width: 100%;
+  position: absolute;
+}
+.sec1 .content .main_img .rotate_stars img.stars {
+  height: 100%;
+  animation: rotate normal infinite 20s linear 2s;
+  top: 0;
+  left: 0;
+}
+.sec1 .content .main_img .rotate_stars img:nth-of-type(2) {
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sec1 .content .main_img .cactus {
+  width: 40%;
+  height: 210px;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+.sec1 .content .main_img .cactus div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sec1 .content .main_img .cactus div img {
+  position: absolute;
+}
+.sec1 .content .main_img .cactus div img:first-of-type {
+  width: 70px;
+  height: 30px;
+  top: 0;
+  right: 10%;
+}
+.sec1 .content .main_img .cactus div img:nth-of-type(2) {
+  width: 50px;
+  height: 20px;
+  top: 0;
+  left: 0%;
+}
+.sec1 .content .main_img .cactus div img:nth-of-type(3) {
+  width: 60px;
+  height: 30px;
+  top: 10%;
+  left: 20%;
+}
+.sec1 .content .main_img .cactus div img:nth-of-type(4) {
+  width: 15px;
+  height: 30px;
+  top: 40%;
+  right: 20%;
+  animation: musical normal infinite 5s linear 2s;
+}
+.sec1 .content .main_img .cactus div img:nth-of-type(5) {
+  width: 13px;
+  height: 28px;
+  top: 40%;
+  left: 20%;
+  animation: musical2 normal infinite 5.5s linear 2.5s;
+}
+.sec1 .content .main_img .cactus div img:last-of-type {
+  width: 60px;
+  height: 125px;
+  bottom: 0;
+  left: 50px;
+}
+@keyframes musical {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(30deg);
+  }
+  80% {
+    transform: rotate(-30deg);
+    width: 10px;
+    height: 20px;
+    top: 20%;
+    right: 10%;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes musical2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-30deg);
+  }
+  80% {
+    transform: rotate(30deg);
+    width: 7px;
+    height: 17px;
+    top: 25%;
+    left: 10%;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.container {
+  overflow: hidden;
+}
+.container .g_content {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+.container .g_content .page {
+  flex: 1 0 120%;
+}
+.container .g_content .page2 {
+  background: #02554b;
+  padding: 130px 370px 50px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .g_content .page2 .s2_img {
+  position: relative;
+  width: 810px;
+  font-family: "Pretty_Left_handed";
+}
+.container .g_content .page2 .s2_img > img {
+  position: absolute;
+}
+.container .g_content .page2 .s2_img > img:first-of-type {
+  width: 100%;
+  height: 540px;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 10px rgba(36, 36, 36, 0.7);
+}
+.container .g_content .page2 .s2_img > img:nth-of-type(2) {
+  width: 20%;
+  right: 30px;
+  top: 40px;
+  display: none;
+}
+.container .g_content .page2 .s2_img .introduce {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+}
+.container .g_content .page2 .s2_img .introduce .myImg {
+  width: 220px;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.container .g_content .page2 .s2_img .introduce .myImg img {
+  width: 200px;
+  height: 200px;
+}
+.container .g_content .page2 .s2_img .introduce .myInfo {
+  width: 445px;
+  height: 250px;
+  margin-left: 50px;
+}
+.container .g_content .page2 .s2_img .introduce .myInfo .myInfo_hidden {
+  display: none;
+}
+.container .g_content .page2 .s2_img .introduce .myInfo p {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: 0.7s;
+}
+.container .g_content .page2 .s2_img .introduce .myDream {
+  width: 60%;
+  height: 470px;
+  position: relative;
+  margin: 30px 50px 0px 100px;
+}
+.container .g_content .page2 .s2_img .introduce .myDream > img:first-of-type {
+  width: 437px;
+  height: 458px;
+}
+.container .g_content .page2 .s2_img .introduce .myDream > img:nth-of-type(2) {
+  width: 40%;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  transform: rotate(7deg);
+}
+.container .g_content .page2 .s2_img .introduce .myDream > p {
+  position: absolute;
+  top: 110px;
+  left: 60px;
+  font-size: 1.2rem;
+  line-height: 31px;
+  transform: rotate(3.5deg);
+}
+.container .g_content .page2 .s2_img .introduce .myDream .post {
+  width: 130px;
+  height: 45px;
+  position: absolute;
+}
+.container .g_content .page2 .s2_img .introduce .myDream .post:hover p {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.container .g_content .page2 .s2_img .introduce .myDream .post:hover img {
+  transform: scale(1.1);
+}
+.container .g_content .page2 .s2_img .introduce .myDream .post img {
+  width: 100%;
+  transition: 0.3s;
+  box-shadow: 5px 0px 0px rgba(36, 36, 36, 0.3);
+}
+.container .g_content .page2 .s2_img .introduce .myDream .post p {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: -37px 0 0 35px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .g_content .page2 .s2_img .introduce .myDream .postIt {
+  top: 0px;
+  right: -170px;
+}
+.container .g_content .page2 .s2_img .introduce .myDream .postIt2 {
+  top: 60px;
+  right: -170px;
+}
+.container .g_content .page2 .s2_img .introduce .myDream .postIt3 {
+  top: 120px;
+  right: -170px;
+}
+.container .g_content .page2 .my_project {
+  width: 45%;
+}
+.container .g_content .page2 .my_project .go_pj {
+  width: 80%;
+}
+.container .g_content .page2 .my_project .go_pj .pj_ticket {
+  width: 90%;
+  height: 250px;
+  display: flex;
+}
+.container .g_content .page2 .my_project .go_pj .pj_ticket > div {
+  width: 50%;
+  height: 100%;
+  background: #d5d5d5;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .g_content .page2 .my_project .go_pj .pj_ticket > div .orangeBox {
+  width: 100%;
+  background: #fe4818;
+  height: 50px;
+  align-self: flex-end;
+}
+.container .g_content .page2 .my_project .go_pj .pj_ticket > div .left_ticket {
+  padding: 20px;
+}
+.container .g_content .page2 .my_project .go_pj .pj_ticket > div .left_ticket img {
+  width: 110px;
+  height: 120px;
+}
+.container .g_content .page2 .my_project .go_pj .pj_ticket > div .right_ticket {
+  padding: 20px;
+}
+.container .g_content .page2 .my_project .go_pj .pj_ticket > div .right_ticket img {
+  width: 110px;
+  height: 80px;
+}
+.container .g_content .page3 {
+  background: firebrick;
+}
+.container .g_content .page4 {
+  background: cornflowerblue;
+}
+.container .g_content .page5 {
+  background: seagreen;
+}

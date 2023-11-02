@@ -77,7 +77,7 @@
     font-family: 'RixInooAriDuriR';
     // font-family: 'Titan One', sans-serif;
 }
-.content{width: 1600px; height: 100%; margin: 0 auto;}
+// .content{width: 1600px; height: 100%; margin: 0 auto;}
 .section {background: $backCL; width: 100%; height: 100vh;}
 
 .nav{width: 100%; height: 100px; display: flex; justify-content: space-between; position: fixed; top: 0; left: 0;
@@ -114,9 +114,10 @@
 
 .sec1 { color: $subCL;
 
-    .content{ display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+    .content{width: 1600px; height: 100%; margin: 0 auto; padding: 130px 0 100px 0;
+        display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
 
-        .main_txt{width: 80%; 
+        .main_txt{width: 70%; 
             p{font-size: 1rem; margin: 0px 0px -70px 10px; 
                 font-family: 'PartialSansKR-Regular';
                 // font-family: 'RixInooAriDuriR';
@@ -165,15 +166,45 @@
             }
         }
 
-        .main_img{width: 210px; height: 210px; position: relative;
-            img{width: 100%; position: absolute;
-                &:first-of-type{width: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-                &.stars{ height: 100%; animation: rotate normal infinite 20s linear 2s; top: 0; left: 0;}
+        .main_img{ width: 25%; height: 60%; position: relative; display: flex; flex-wrap: wrap;
+            
+            .rotate_stars{width: 210px; height: 210px; position: relative;
+                img{width: 100%; position: absolute;
+                    &.stars{ height: 100%; animation: rotate normal infinite 20s linear 2s; top: 0; left: 0;}
+                    &:nth-of-type(2){width: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+                }
+                @keyframes rotate{
+                    to{transform: rotate(360deg);}
+                }
+            }   
+            .cactus{width: 40%; height: 210px; position: absolute; bottom: 0%; right: 0%;
+
+                div{ position: relative; width: 100%; height: 100%;
+                    img{position: absolute;}
+                    img:first-of-type{width: 70px; height: 30px; top: 0; right: 10%;}
+                    img:nth-of-type(2){width: 50px; height: 20px; top: 0; left: 0%;}
+                    img:nth-of-type(3){width: 60px; height: 30px; top: 10%; left: 20%;}
+                    img:nth-of-type(4){width: 15px; height: 30px; top: 40%; right: 20%; animation: musical normal infinite 5s linear 2s; }
+                    img:nth-of-type(5){width: 13px; height: 28px; top: 40%; left: 20%; animation: musical2 normal infinite 5.5s linear 2.5s; }
+                    img:last-of-type{width: 60px; height: 125px; bottom: 0; left: 50px;}
+                }
+                @keyframes musical{
+                    0%{transform: rotate(0deg);}
+                    40%{transform: rotate(30deg);}
+                    80%{transform: rotate(-30deg); width: 10px; height: 20px;  top: 20%; right: 10%; }
+                    100%{transform: rotate(0deg);}
+                }
+                @keyframes musical2{
+                    0%{transform: rotate(0deg);}
+                    40%{transform: rotate(-30deg);}
+                    80%{transform: rotate(30deg); width: 7px; height: 17px;  top: 25%; left: 10%; }
+                    100%{transform: rotate(0deg);}
+                }
             }
-            @keyframes rotate{
-                to{transform: rotate(360deg);}
-            }
-        }        
+            
+            // .city{width: 80%; @include solid(5px,$subCL); border-radius: 150px 100px;}
+        }
+             
     }
 
 }
@@ -181,28 +212,83 @@
 
 
 .container {overflow: hidden;
-    .g_content{ display: flex; flex-wrap: nowrap; width: 100%; height: 100vh;
+    .g_content{ display: flex; flex-wrap: nowrap; height: 100vh;
         .page{flex: 1 0 120%;}
-        .page2 { background: $backCL; padding: 130px 120px 50px; 
+        .page2 { background: $backCL; padding: 130px 370px 50px 120px; display: flex; justify-content: space-between;
         
-            .s2_img{position: relative; width: 50%;
-                img{width: 100%;
-                    // &:last-of-type{}
+            .s2_img{position: relative; width: 810px; font-family: 'Pretty_Left_handed';
+                
+                &>img{ position: absolute;
+                    &:first-of-type{width: 100%; height: 540px; top: 0; left: 0; box-shadow: 0px 0px 10px rgba(36, 36, 36, 0.7);}
+                    &:nth-of-type(2){width: 20%; right: 30px; top: 40px; display: none;}
                 }
-                .introduce{position: absolute; top: 50px; left: 70px; width: 75%; 
-                    display: flex; justify-content: space-between; flex-wrap: wrap;
+                               
+                .introduce{position: absolute; top: 50px; left: 50px; width: 90%; 
+                    display: flex; justify-content: flex-end; flex-wrap: wrap;
                     // font-family: 'Se-hwa';
-                    // font-family: 'GangwonEduSaeeum_OTFMediumA';
+                    font-family: 'GangwonEduSaeeum_OTFMediumA';
                     // font-family: 'Yuni_ddingddang';
                     // font-family: 'Ddakdandan';
-                    font-family: 'Pretty_Left_handed';
-    
-                    img{width: 170px; height: 170px;}
-                    .myInfo{width: 50%; height: 500px;
-                        p{font-weight: 600; font-size: 1.4rem; color: darkslateblue; margin-bottom: 1rem;}
+                    .myImg{ width: 220px; height: 250px; background: #fff; display: flex; justify-content: center;
+                        padding-top: 10px;
+                        img{width: 200px; height: 200px;} 
+                    }
+
+                    .myInfo{width: 445px; height: 250px; margin-left: 50px;
+                        .myInfo_hidden{display: none;}
+                        p{font-weight: 600; font-size: 1.4rem; margin-bottom: 1rem; opacity: 0; transition: .7s;}
+                        // .myInfo_visible p.on{animation: cursor .3s infinite; display: inline-block;}
+                        // @keyframes cursor{
+                        //     0%{border-right: 1px solid #fff} 
+                        //     50%{border-right: 1px solid #000} 
+                        //     100%{border-right: 1px solid #fff} 
+                        // }
+                    }
+
+                    .myDream{width: 60%; height: 470px; position: relative; margin: 30px 50px 0px 100px;
+                        &>img{
+                            &:first-of-type{width: 437px; height: 458px; }
+                            &:nth-of-type(2){width: 40%; position: absolute; bottom: 50px; right: 50px; transform: rotate(7deg);}
+                        }
+                        &>p{position: absolute; top: 110px; left: 60px; font-size: 1.2rem; line-height: 31px;
+                            transform: rotate(3.5deg);
+                        }
+
+                        .post{width: 130px; height: 45px; position: absolute;
+                            &:hover p{opacity: 1; transform: scale(1.1); }
+                            &:hover img{transform: scale(1.1); }
+                            img{width: 100%; transition: .3s; box-shadow: 5px 0px 0px rgba(36, 36, 36, 0.3);}
+                            p{width: 100%; font-weight: 600; font-size: 1.2rem; margin: -37px 0 0 35px; opacity: 0.5; 
+                                cursor: pointer; transition: .3s;
+                            }
+                        }
+                        .postIt{top: 0px; right: -170px;}
+                        .postIt2{top: 60px; right: -170px;}
+                        .postIt3{top: 120px; right: -170px;}
                     }
                 }
             }
+
+            .my_project{width: 45%;
+                    
+                .go_pj{width: 80%;
+                    .pj_ticket{width: 90%; height: 250px; display: flex;
+                        &>div{width: 50%; height: 100%; background: #d5d5d5; overflow: hidden; border-radius: 20px; 
+                            display: flex; flex-wrap: wrap; 
+                            .orangeBox{width: 100%; background: $subCL2; height: 50px; align-self: flex-end;}
+
+                            .left_ticket{padding: 20px;
+                                img{width: 110px; height: 120px;}
+                            }
+                            .right_ticket{padding: 20px;
+                                img{width: 110px; height: 80px;}
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            
             
         }
     

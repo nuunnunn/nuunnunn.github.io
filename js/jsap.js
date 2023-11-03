@@ -1,28 +1,9 @@
 //스크롤 방향
 gsap.registerPlugin(ScrollTrigger);
-// gsap.defaults({ease: "power1", duration: 3});
-
-// const tl = gsap.timeline();
-// tl.from(".page3", {xPercent: 100})
-//   .from(".page4", {xPercent: 100})
-//   .from(".page5", {yPercent: -100});
-
-// ScrollTrigger.create({
-// 	animation: tl,
-//   trigger: ".g_content",
-//   start: "top top", 
-//   end: "+=4000",
-//   markers: true,
-//   pin: true,
-// 	scrub: 2
-// });
-
-
 
 const pages = gsap.utils.toArray(".page");
 const pagesAmount = pages.length;
 const proxy = document.createElement("div");
-
 
 const t1 =  gsap.timeline({
   scrollTrigger: {
@@ -32,9 +13,7 @@ const t1 =  gsap.timeline({
     scrub: 1,
     pin: true,
     onUpdate: (self) => {
-      // console.log(self.scroll(), self.start, self.start - self.scroll());
       gsap.set(proxy, { x: self.start - self.scroll() });
-      // d[0].update();
     },
     markers: {
       startColor: "white",
@@ -46,34 +25,6 @@ t1.to(pages, {
   xPercent: -100 * (pagesAmount - 1),
   ease: "none",  
 });
-
-
-// t1.to('.page3', { xPercent: -100, ease: "none",})  
-//   .to('.page4', { xPercent: -100, ease: "none",})  
-//   .to('.page5', { yPercent: 100, ease: "none",  
-// });
-
-
-// const t =  gsap.to(pages, {
-//   xPercent: -100 * (pagesAmount - 1),
-//   ease: "none", 
-//   scrollTrigger: {
-//     trigger: ".container",
-//     start: "top top",
-//     end: "+=" + 100 * pagesAmount + "%",
-//     scrub: 1,
-//     pin: true,
-//     onUpdate: (self) => {
-//       // console.log(self.scroll(), self.start, self.start - self.scroll());
-//       gsap.set(proxy, { x: self.start - self.scroll() });
-//       // d[0].update();
-//     },
-//     markers: {
-//       startColor: "white",
-//       endColor: "white"
-//     }
-//   }
-// });
 
 
 //스크롤 만큼 이동

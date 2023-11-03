@@ -1,24 +1,5 @@
 
 
-var tyInt;
-
-$(window).scroll(function () {
-  var currentScrollTop = $(this).scrollTop();
-  
-  //main
-  if(0< currentScrollTop && currentScrollTop < 99){
-    $('.sec1').children('.content').stop().fadeIn()
-  }else if(currentScrollTop>100){
-    $('.sec1').children('.content').stop().fadeOut()
-  }
-
-  if(500< currentScrollTop){
-    if (typingBool == false) { // 타이핑이 진행되지 않았다면 
-        typingBool = true;
-        tyInt = setInterval(typing, 80); // 반복동작 
-    }
-  }
-});
 
 
 //글자 타이핑
@@ -26,6 +7,28 @@ var typingBool = false;
 var typingIdx = 0;
 var pIndex = 0;
 var pLength = $(".myInfo_hidden > p").length;
+var tyInt;
+
+$(window).scroll(function () {
+  var currentScrollTop = $(this).scrollTop();
+  //main
+  if(0< currentScrollTop && currentScrollTop < 99){
+    $('.sec1').children('.content').stop().fadeIn()
+  }else if(currentScrollTop>100){
+    $('.sec1').children('.content').stop().fadeOut()
+  }
+
+  //타이핑
+  if(500< currentScrollTop && currentScrollTop < 1903){
+    if (typingBool == false) { // 타이핑이 진행되지 않았다면 
+        typingBool = true;
+        tyInt = setInterval(typing, 80); // 반복동작 
+    }
+    $('.myImg').css({transform: 'translateX(0)', opacity:1});
+    $('.myDream').css({transform: 'translateY(0)', opacity:1});
+    $('.show_post').css({transform: 'translateX(0)', opacity:1})
+  }
+});
 
 // 타이핑될 텍스트를 가져온다 
 var typingTxt = $(".myInfo_hidden > p").eq(pIndex).text();

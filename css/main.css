@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Archivo+Black&family=Black+Han+Sans&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400&family=Gasoek+One&family=Gowun+Batang&family=Grandiflora+One&family=Gugi&family=Hahmlet:wght@100&family=IBM+Plex+Sans+KR:wght@300&family=Lilita+One&family=Lobster&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@200;900&family=Orbit&family=Paytone+One&family=Prompt:wght@500&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Archivo+Black&family=Black+Han+Sans&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400&family=Coiny&family=Gasoek+One&family=Gowun+Batang&family=Grandiflora+One&family=Gugi&family=Hahmlet:wght@100&family=IBM+Plex+Sans+KR:wght@300&family=Lilita+One&family=Lobster&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@200;300;400;900&family=Orbit&family=Paytone+One&family=Prompt:wght@500&family=Titan+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -29,12 +29,6 @@ a {
   font-style: normal;
 }
 @font-face {
-  font-family: "Minhye";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Minhye.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "Se-hwa";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/Se-hwa.woff") format("woff");
   font-weight: normal;
@@ -43,12 +37,6 @@ a {
 @font-face {
   font-family: "GangwonEduSaeeum_OTFMediumA";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Uiyeun";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -70,16 +58,10 @@ a {
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "SlowSlow";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/SlowSlow.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 #wrap {
   width: 100%;
   height: 100vh;
-  font-family: "RixInooAriDuriR";
+  font-family: "Agbalumo", sans-serif;
 }
 
 .section {
@@ -103,7 +85,6 @@ a {
 }
 .nav a {
   font-size: 2rem;
-  font-family: "Agbalumo", sans-serif;
 }
 .nav .hamburger {
   width: 20px;
@@ -378,14 +359,16 @@ a {
 }
 .container .g_content .page2 {
   background: #02554b;
-  padding: 130px 370px 50px 120px;
+  padding: 130px 0% 50px 0%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+  font-family: "GangwonEduSaeeum_OTFMediumA";
 }
 .container .g_content .page2 .s2_img {
   position: relative;
   width: 810px;
-  font-family: "Pretty_Left_handed";
+  margin-right: 200px;
 }
 .container .g_content .page2 .s2_img > img {
   position: absolute;
@@ -397,11 +380,49 @@ a {
   left: 0;
   box-shadow: 0px 0px 10px rgba(36, 36, 36, 0.7);
 }
-.container .g_content .page2 .s2_img > img:nth-of-type(2) {
-  width: 20%;
-  right: 30px;
-  top: 40px;
-  display: none;
+.container .g_content .page2 .s2_img .post {
+  width: 130px;
+  height: 45px;
+  position: absolute;
+}
+.container .g_content .page2 .s2_img .post:hover p {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.container .g_content .page2 .s2_img .post:hover img {
+  transform: scale(1.1);
+}
+.container .g_content .page2 .s2_img .post img {
+  width: 100%;
+  transition: 0.3s;
+  box-shadow: 5px 0px 0px rgba(36, 36, 36, 0.3);
+}
+.container .g_content .page2 .s2_img .post p {
+  width: 100%;
+  font-size: 1.2rem;
+  margin: -37px 0 0 35px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .g_content .page2 .s2_img .postIt {
+  top: 36%;
+  right: -10%;
+}
+.container .g_content .page2 .s2_img .postIt img {
+  transform: scale(1.1);
+}
+.container .g_content .page2 .s2_img .postIt p {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.container .g_content .page2 .s2_img .postIt2 {
+  top: 43%;
+  right: -10%;
+}
+.container .g_content .page2 .s2_img .postIt3 {
+  top: 50%;
+  right: -10%;
 }
 .container .g_content .page2 .s2_img .introduce {
   position: absolute;
@@ -409,9 +430,8 @@ a {
   left: 50px;
   width: 90%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
-  font-family: "GangwonEduSaeeum_OTFMediumA";
 }
 .container .g_content .page2 .s2_img .introduce .myImg {
   width: 220px;
@@ -420,6 +440,9 @@ a {
   display: flex;
   justify-content: center;
   padding-top: 10px;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 1s;
 }
 .container .g_content .page2 .s2_img .introduce .myImg img {
   width: 200px;
@@ -428,7 +451,6 @@ a {
 .container .g_content .page2 .s2_img .introduce .myInfo {
   width: 445px;
   height: 250px;
-  margin-left: 50px;
 }
 .container .g_content .page2 .s2_img .introduce .myInfo .myInfo_hidden {
   display: none;
@@ -445,6 +467,9 @@ a {
   height: 470px;
   position: relative;
   margin: 30px 50px 0px 100px;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 1s;
 }
 .container .g_content .page2 .s2_img .introduce .myDream > img:first-of-type {
   width: 437px;
@@ -459,89 +484,201 @@ a {
 }
 .container .g_content .page2 .s2_img .introduce .myDream > p {
   position: absolute;
-  top: 110px;
-  left: 60px;
-  font-size: 1.2rem;
+  top: 107px;
+  left: 53px;
+  font-size: 1.3rem;
   line-height: 31px;
-  transform: rotate(3.5deg);
+  transform: rotate(4deg);
+  font-family: "Se-hwa";
 }
-.container .g_content .page2 .s2_img .introduce .myDream .post {
-  width: 130px;
-  height: 45px;
-  position: absolute;
+.container .g_content .page2 .show_post {
+  width: 40%;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: 1s;
+  position: relative;
 }
-.container .g_content .page2 .s2_img .introduce .myDream .post:hover p {
-  opacity: 1;
-  transform: scale(1.1);
-}
-.container .g_content .page2 .s2_img .introduce .myDream .post:hover img {
-  transform: scale(1.1);
-}
-.container .g_content .page2 .s2_img .introduce .myDream .post img {
+.container .g_content .page2 .show_post .contact {
+  display: block;
   width: 100%;
-  transition: 0.3s;
-  box-shadow: 5px 0px 0px rgba(36, 36, 36, 0.3);
+  height: 100%;
 }
-.container .g_content .page2 .s2_img .introduce .myDream .post p {
-  width: 100%;
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin: -37px 0 0 35px;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.container .g_content .page2 .s2_img .introduce .myDream .postIt {
-  top: 0px;
-  right: -170px;
-}
-.container .g_content .page2 .s2_img .introduce .myDream .postIt2 {
-  top: 60px;
-  right: -170px;
-}
-.container .g_content .page2 .s2_img .introduce .myDream .postIt3 {
-  top: 120px;
-  right: -170px;
-}
-.container .g_content .page2 .my_project {
-  width: 45%;
-}
-.container .g_content .page2 .my_project .go_pj {
-  width: 80%;
-}
-.container .g_content .page2 .my_project .go_pj .pj_ticket {
-  width: 90%;
-  height: 250px;
+.container .g_content .page2 .show_post .contact > div {
+  width: 50%;
+  height: 80%;
+  background: #e0e0e0;
+  border-radius: 20px;
   display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
-.container .g_content .page2 .my_project .go_pj .pj_ticket > div {
+.container .g_content .page2 .show_post .contact > div .orangeBox {
+  width: 100%;
+  background: #fe4818;
+  height: 150px;
+  align-self: flex-end;
+  padding: 20px;
+}
+.container .g_content .page2 .show_post .my_project {
+  width: 100%;
+  height: 85%;
+  position: relative;
+  display: none;
+}
+.container .g_content .page2 .show_post .my_project .hiSun {
+  position: absolute;
+  width: 25%;
+  top: 40%;
+  right: 5%;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: 1s;
+}
+.container .g_content .page2 .show_post .my_project .arrow {
+  width: 10%;
+  position: absolute;
+  bottom: 36%;
+  left: 21%;
+  z-index: 10;
+  transform: rotate(-25deg);
+}
+.container .g_content .page2 .show_post .my_project .pj_intro {
+  position: relative;
+  transform: rotate(-3deg);
+  width: 50%;
+}
+.container .g_content .page2 .show_post .my_project .pj_intro img {
+  width: 100%;
+}
+.container .g_content .page2 .show_post .my_project .pj_intro p {
+  position: absolute;
+  bottom: 27%;
+  left: 19%;
+  font-size: 1.3rem;
+}
+.container .g_content .page2 .show_post .my_project .pj_intro .go_pj_btn {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+.container .g_content .page2 .show_post .my_project .pj_intro .go_pj_btn .button-container {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid #000;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+}
+.container .g_content .page2 .show_post .my_project .pj_intro .go_pj_btn .button-container button {
+  width: 101%;
+  height: 100%;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  background: #000;
+  -webkit-mask: url("../img/mask.png");
+          mask: url("../img/mask.png");
+  padding-top: 7px;
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.container .g_content .page2 .show_post .my_project .pj_intro .go_pj_btn .button-container button:hover {
+  animation: ani 0.7s steps(29) forwards;
+}
+.container .g_content .page2 .show_post .my_project .pj_intro .go_pj_btn .mask {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  width: 101%;
+  font-size: 1.2rem;
+  margin-top: 17px;
+  overflow: hidden;
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+.container .g_content .page2 .show_post .my_project .pj_ticket {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0%;
+  left: 15%;
+  transform: rotate(10deg);
+  font-family: "Noto Serif Kr", sans-serif;
+}
+.container .g_content .page2 .show_post .my_project .pj_ticket > div {
   width: 50%;
   height: 100%;
-  background: #d5d5d5;
+  background: #e0e0e0;
   overflow: hidden;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
 }
-.container .g_content .page2 .my_project .go_pj .pj_ticket > div .orangeBox {
+.container .g_content .page2 .show_post .my_project .pj_ticket > div .orangeBox {
   width: 100%;
   background: #fe4818;
   height: 50px;
   align-self: flex-end;
-}
-.container .g_content .page2 .my_project .go_pj .pj_ticket > div .left_ticket {
   padding: 20px;
+  font-size: 0.6rem;
 }
-.container .g_content .page2 .my_project .go_pj .pj_ticket > div .left_ticket img {
-  width: 110px;
-  height: 120px;
-}
-.container .g_content .page2 .my_project .go_pj .pj_ticket > div .right_ticket {
+.container .g_content .page2 .show_post .my_project .pj_ticket > div .left_ticket {
   padding: 20px;
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: space-between;
 }
-.container .g_content .page2 .my_project .go_pj .pj_ticket > div .right_ticket img {
-  width: 110px;
-  height: 80px;
+.container .g_content .page2 .show_post .my_project .pj_ticket > div .left_ticket img {
+  width: 48%;
+  border-radius: 10px;
+}
+.container .g_content .page2 .show_post .my_project .pj_ticket > div .left_ticket h3 {
+  width: 45%;
+}
+.container .g_content .page2 .show_post .my_project .pj_ticket > div .left_ticket h3 span {
+  font-size: 0.9rem;
+}
+.container .g_content .page2 .show_post .my_project .pj_ticket > div .right_ticket {
+  padding: 30px 15px 15px;
+  width: 100%;
+  height: calc(100% - 50px);
+  position: relative;
+}
+.container .g_content .page2 .show_post .my_project .pj_ticket > div .right_ticket img {
+  width: 25%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.container .g_content .page2 .show_post .hobby {
+  display: none;
 }
 .container .g_content .page3 {
   background: firebrick;
@@ -549,6 +686,16 @@ a {
 .container .g_content .page4 {
   background: cornflowerblue;
 }
-.container .g_content .page5 {
+
+.page5 {
   background: seagreen;
+  width: 100%;
+  height: 100%;
+}
+
+.sun {
+  width: 10%;
+  position: fixed;
+  bottom: 2%;
+  left: 1%;
 }

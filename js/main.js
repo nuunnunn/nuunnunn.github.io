@@ -34,8 +34,10 @@ $('.post').click(function(){
     console.log($(this).hasClass('postIt2'))
     if($(this).hasClass('postIt')){
         $('.contact').stop().fadeIn().siblings().hide();
+        $('.show_post').css('width','33%')
     }else if($(this).hasClass('postIt2')){
         $('.my_project').stop().fadeIn().siblings().hide();
+        $('.show_post').css('width','37%')
     }else{
         $('.hobby').stop().fadeIn().siblings().hide();
     }

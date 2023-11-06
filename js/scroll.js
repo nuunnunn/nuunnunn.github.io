@@ -28,6 +28,19 @@ $(window).scroll(function () {
     $('.myDream').css({transform: 'translateY(0)', opacity:1});
     $('.show_post').css({transform: 'translateX(0)', opacity:1})
   }
+
+  //이미지 스크롤하면 따라옴
+  if(2240 < currentScrollTop && currentScrollTop < 4599){
+    console.log(currentScrollTop);
+    $('.sun').css({left: `${(currentScrollTop - 2240)*1.5}px`, opacity:1});
+  }else if(currentScrollTop < 2239){
+    $('.sun').css({left: `-300px`, opacity: 1});
+  }else if(4600 < currentScrollTop){
+    $('.sun').css({opacity:0})
+  }
+  // else if(2900 < currentScrollTop){
+  //   $('.sun').css('left', `${currentScrollTop - 1840}px`);
+  // }
 });
 
 // 타이핑될 텍스트를 가져온다 

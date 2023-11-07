@@ -40,23 +40,4 @@ $(function(){
   $('.page').each(function(index){
     $(this).attr("data-windex",win_w * index);
   });
-
-  // $('.page').on("mousewheel",function(e){
-  //   //속성값 불러옴
-  //   var pagePosH = parseInt($(this).attr("data-hindex"));
-  //   var pagePosW = parseInt($(this).attr("data-windex"));
-
-  //   if(pagePosH < 963){
-  //     // console.log(e.originalEvent.wheelDelta)
-  //     // if(e.originalEvent.wheelDelta >=0 ){
-  //     //   $("html,body").stop().animate({scrollTop:pagePosH - win_h});
-  //     //   return false;
-
-  //     // } else if (e.originalEvent.wheelDelta < 0) {
-  //     //   $("html,body").stop().animate({scrollTop:pagePosH + win_h},1000);
-  //     //   return false;
-  //     // }
-  //     $('.section01').children('.content').fadeOut()
-  //   }
-  // });
 });

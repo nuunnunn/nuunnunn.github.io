@@ -34,7 +34,7 @@ $('.post').click(function(){
     console.log($(this).hasClass('postIt2'))
     if($(this).hasClass('postIt')){
         $('.contact').stop().fadeIn().siblings().hide();
-        $('.show_post').css('width','33%')
+        $('.show_post').css('width','35%')
     }else if($(this).hasClass('postIt2')){
         $('.my_project').stop().fadeIn().siblings().hide();
         $('.show_post').css('width','37%')
@@ -53,6 +53,5 @@ $('.go_pj_btn').hover(function(){
 
 //section2 button click
 $('.button-container').children('button').click(function(){
-    console.log($(this))
     $('body,html').animate({scrollTop:2250})
 })

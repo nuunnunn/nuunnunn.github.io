@@ -31,16 +31,14 @@ $('.post').click(function(){
     $(this).children('img').css({transform:'scale(1.1)'});
     $(this).children('p').css({transform:'scale(1.1)', opacity:1});
 
-    console.log($(this).hasClass('postIt2'))
     if($(this).hasClass('postIt')){
-        $('.contact').stop().fadeIn().siblings().hide();
-        $('.show_post').css('width','35%')
-    }else if($(this).hasClass('postIt2')){
-        $('.my_project').stop().fadeIn().siblings().hide();
-        $('.show_post').css('width','37%')
-    }else{
-        $('.hobby').stop().fadeIn().siblings().hide();
+        $('.my_project').stop().fadeIn(1000).siblings().hide();
+        // $('.show_post').css('width','37%')
     }
+    // else if($(this).hasClass('postIt2')){
+    //     $('.myAmbition').stop().fadeIn().siblings().hide();
+    //     $('.show_post').css('width','35%')
+    // }
 });
 
 
@@ -53,5 +51,5 @@ $('.go_pj_btn').hover(function(){
 
 //section2 button click
 $('.button-container').children('button').click(function(){
-    $('body,html').animate({scrollTop:2250})
+    $('body,html').animate({scrollTop:2650})
 })

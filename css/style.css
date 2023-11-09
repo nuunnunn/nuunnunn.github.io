@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Archivo+Black&family=Black+Han+Sans&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400&family=Coiny&family=Gasoek+One&family=Gowun+Batang&family=Grandiflora+One&family=Gugi&family=Hahmlet:wght@100&family=IBM+Plex+Sans+KR:wght@300&family=Lilita+One&family=Lobster&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@200;300;400;900&family=Orbit&family=Paytone+One&family=Prompt:wght@500&family=Titan+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fed4d5;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "PartialSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RixInooAriDuriR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Se-hwa";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/Se-hwa.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.section {
+  height: 100%;
+  width: 33.3333333333%;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 1000;
+  background: transparent;
+  font-family: "Agbalumo", sans-serif;
+}
+.nav a {
+  font-size: 2rem;
+}
+.nav .hamburger {
+  width: 20px;
+  height: 17px;
+  position: relative;
+  cursor: pointer;
+}
+.nav .hamburger span {
+  height: 2px;
+  background: #f9a42d;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+.nav .hamburger span:first-of-type {
+  top: 0;
+  right: 0;
+  width: 60%;
+  transition-delay: 0.1s;
+}
+.nav .hamburger span:nth-of-type(2) {
+  top: 48%;
+  right: 0;
+  width: 80%;
+}
+.nav .hamburger span:last-of-type {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.nav .hamburger.hover span:first-of-type {
+  width: 100%;
+}
+.nav .hamburger.hover span:nth-of-type(2) {
+  width: 100%;
+}
+.nav .hamburger.active span:first-of-type {
+  transform: translateY(7.2px) rotate(45deg);
+}
+.nav .hamburger.active span:nth-of-type(2) {
+  width: 0%;
+}
+.nav .hamburger.active span:last-of-type {
+  transform: translateY(-7.2px) rotate(-45deg);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fff;
+  background: #02554b;
+  color: #f9a42d;
+}
+.main .content {
+  width: 1120px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 130px 0 0px 0;
+  position: relative;
+}
+.main .content .leaflet_wrap {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  transition: 1s;
+  cursor: pointer;
+}
+.main .content .leaflet_wrap:hover {
+  transform: scale(1.3);
+  left: 55%;
+}
+.main .content .leaflet_wrap .leaflet {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 1000px;
+}
+.main .content .leaflet_wrap .leaflet:hover .front {
+  transform: rotateY(-180deg);
+  opacity: 0.8;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.main .content .leaflet_wrap .leaflet:hover .front h2, .main .content .leaflet_wrap .leaflet:hover .front img {
+  opacity: 0;
+}
+.main .content .leaflet_wrap .leaflet > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.main .content .leaflet_wrap .leaflet > div.front {
+  background: #04a7ba;
+  padding: 30px;
+  text-align: center;
+  border: 5px solid #fed4d5;
+  z-index: 1;
+  transform-origin: left center;
+  transition: 1s ease-in;
+  transform: rotateY(-15deg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), 10px 0px 0px #fed4d5;
+}
+.main .content .leaflet_wrap .leaflet > div.front h2, .main .content .leaflet_wrap .leaflet > div.front img {
+  transition: 1s;
+}
+.main .content .leaflet_wrap .leaflet > div.front h2 {
+  font-size: 3rem;
+  font-family: "Noto Serif Kr", sans-serif;
+  color: #fed4d5;
+  line-height: 70px;
+}
+.main .content .leaflet_wrap .leaflet > div.front h2 span {
+  color: #feb1b7;
+}
+.main .content .leaflet_wrap .leaflet > div.front .heart {
+  width: 30%;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+}
+.main .content .leaflet_wrap .leaflet > div.front .planet {
+  width: 15%;
+  position: absolute;
+  top: 23%;
+  left: 7%;
+  animation: planet 10s ease-out 2s 1 forwards;
+}
+@keyframes planet {
+  20% {
+    top: 23%;
+    left: 80%;
+  }
+  40% {
+    top: 60%;
+    left: 7%;
+  }
+  60% {
+    left: 80%;
+    top: 65%;
+  }
+  80% {
+    left: 7%;
+    top: 70%;
+  }
+  100% {
+    rotate: 180deg;
+    left: 20%;
+    top: 70%;
+  }
+}
+.main .content .leaflet_wrap .leaflet > div.back {
+  background: #fed4d5;
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.main .content .leaflet_wrap .leaflet > div.back > div {
+  width: 100%;
+  height: calc(100% - 125px);
+  border: 2px solid #333;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 5px;
+  background: #04a7ba;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .content .leaflet_wrap .leaflet > div.back > div h2 {
+  background: #feb1b7;
+  width: 60%;
+  height: 90px;
+  color: #333;
+  border-radius: 8px 0 0 0;
+  padding: 30px 0 0 10px;
+  border-bottom: 2px solid #333;
+}
+.main .content .leaflet_wrap .leaflet > div.back > div > div {
+  width: 40%;
+  height: 90px;
+  background: #333;
+  border-radius: 0 8px 0 0;
+}
+.main .content .leaflet_wrap .leaflet > div.back > div > div .earth {
+  width: 14%;
+  position: absolute;
+  top: 9.5%;
+  right: 14%;
+  transform: perspective(500px) rotateY(-15deg);
+  transition: 1s;
+}
+.main .content .leaflet_wrap .leaflet > div.back > div > div .stars {
+  width: 23%;
+  animation: rotate normal infinite 20s linear 2s;
+  transition: 1s;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  transform: perspective(500px);
+}
+@keyframes rotate {
+  to {
+    transform: perspective(500px) rotate(360deg);
+  }
+}
+.main .content .leaflet_wrap .leaflet > div.back p {
+  width: 100%;
+  background: #333;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  font-weight: 600;
+}
+.main .content .main_txt {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
+.main .content .main_txt p {
+  font-size: 1rem;
+  margin: 0px 0px -50px 15px;
+  font-family: "RixInooAriDuriR";
+}
+.main .content .main_txt h1 {
+  color: #fe4818;
+  font-size: 8.8rem;
+  font-family: "Agbalumo", sans-serif;
+  margin: 0;
+  padding-bottom: 50px;
+}
+.main .content .main_txt h1:first-of-type span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce 0.5s ease 2 alternate forwards;
+}
+.main .content .main_txt h1:first-of-type span:not(:first-child) {
+  margin-left: -20px;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(6) {
+  margin-left: 0px;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(7) {
+  animation-delay: 0.5s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(8) {
+  animation-delay: 0.6s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(9) {
+  animation-delay: 0.7s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(10) {
+  margin-left: 0px;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(11) {
+  animation-delay: 0.8s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(12) {
+  animation-delay: 0.9s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(13) {
+  animation-delay: 1s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(14) {
+  animation-delay: 1.2s;
+}
+.main .content .main_txt h1:first-of-type span:nth-child(15) {
+  animation-delay: 1.3s;
+}
+.main .content .main_txt h1:first-of-type span:last-child {
+  animation-delay: 1.4s;
+}
+@keyframes bounce {
+  100% {
+    top: -20px;
+  }
+}
+.main .content .main_txt h2 {
+  font-size: 6rem;
+  color: #f9a42d;
+  font-family: "Lilita One", sans-serif;
+}
+.main .content .main_txt h2 span {
+  color: #fe4818;
+}
+.main .content .main_txt h2 i {
+  font-size: 3rem;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  perspective: 1000;
+  overflow: hidden;
+  background: #02554b;
+}
+.wrapper .sections {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .sections .vertical {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .sections .vertical .section1 {
+  border: 2px solid #fe4818;
+}
+.wrapper .sections .vertical .section5 {
+  border: 2px solid #22A7F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0 0 100px;
+}
+.wrapper .sections .vertical .section5 .contact {
+  width: 40%;
+  height: 50%;
+  color: #f9a42d;
+  position: relative;
+  font-family: "Lilita One", sans-serif;
+}
+.wrapper .sections .vertical .section5 .contact .light_box {
+  width: 100%;
+  height: 30%;
+}
+.wrapper .sections .vertical .section5 .contact .light_box:hover ~ .line {
+  animation: line 2s 1 forwards;
+}
+.wrapper .sections .vertical .section5 .contact .light_box:hover ~ .line2 {
+  animation-delay: 0.3s;
+}
+@keyframes line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+.wrapper .sections .vertical .section5 .contact .light_box h2 {
+  font-size: 4rem;
+  cursor: pointer;
+  width: 49%;
+  transition: 1s;
+}
+.wrapper .sections .vertical .section5 .contact .light_box h2:hover ~ img {
+  animation: bulb 2s ease infinite 2s;
+}
+@keyframes wave {
+  100% {
+    background-position-x: 50%;
+    background-size: 20%;
+    font-size: 4.1rem;
+  }
+}
+.wrapper .sections .vertical .section5 .contact .light_box img {
+  position: absolute;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.wrapper .sections .vertical .section5 .contact .light_box img:first-of-type {
+  width: 5%;
+  top: -10%;
+  left: 42%;
+  opacity: 1;
+}
+.wrapper .sections .vertical .section5 .contact .light_box img:not(:first-of-type) {
+  width: 0.5%;
+  opacity: 1;
+  height: 21.5px;
+}
+.wrapper .sections .vertical .section5 .contact .light_box img:nth-of-type(2) {
+  top: -15%;
+  left: 40%;
+  transform: rotate(-20deg);
+}
+.wrapper .sections .vertical .section5 .contact .light_box img:nth-of-type(3) {
+  top: -17%;
+  left: 46%;
+  transform: rotate(20deg);
+}
+.wrapper .sections .vertical .section5 .contact .light_box img:last-of-type {
+  top: -10%;
+  left: 50%;
+  transform: rotate(60deg);
+}
+@keyframes bulb {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wrapper .sections .vertical .section5 .contact .line {
+  width: 40%;
+  height: 4px;
+  background: #fed4d5;
+  border-radius: 10px;
+  position: absolute;
+  top: 18%;
+  left: 2%;
+}
+.wrapper .sections .vertical .section5 .contact .line2 {
+  width: 42%;
+  top: 20%;
+  left: 0%;
+}
+.wrapper .sections .vertical .section5 .contact p {
+  font-size: 2rem;
+}
+.wrapper .sections .vertical .section5 .contact p span {
+  color: #fed4d5;
+}
+.wrapper .sections .vertical .section5 .contact .sns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+.wrapper .sections .vertical .section5 .contact .sns > a {
+  display: inline-block;
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.wrapper .sections .vertical .section5 .contact .sns > a i {
+  font-size: 2rem;
+  width: 100%;
+}
+.wrapper .sections .vertical .section5 .contact .sns > a p {
+  width: 100%;
+}
+.wrapper .sections .horizontal {
+  width: 300%;
+  height: 100%;
+  display: flex;
+}
+.wrapper .sections .horizontal .section2 {
+  border: 2px solid #F9690E;
+}
+.wrapper .sections .horizontal .section3 {
+  border: 2px solid #9B59B6;
+}
+.wrapper .sections .horizontal .section3 .sun {
+  width: 10%;
+  position: absolute;
+  bottom: 5%;
+  left: -280px;
+  transition: 0.5s;
+  z-index: 500;
+}
+.wrapper .sections .horizontal .section4 {
+  border: 2px solid #03C9A9;
+}

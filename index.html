@@ -2,317 +2,168 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강누리 포트폴리오</title>
-    <link rel="stylesheet" href="css/main.css">
+	<meta charset="UTF-8">
+	<title>강누리 포트폴리오</title>
+	<link href="https://fonts.googleapis.com/css?family=Fauna+One" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/0ddafc5ecc.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/0ddafc5ecc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- img 출처 
-    <a href="https://kr.freepik.com/free-vector/hand-drawn-trendy-cartoon-badges_18774530.htm#page=3&query=%EB%B9%88%ED%8B%B0%EC%A7%80%20%EC%BA%90%EB%A6%AD%ED%84%B0&position=3&from_view=search&track=ais">작가 pikisuperstar</a> 출처 Freepik
-    Image by <a href="https://www.freepik.com/free-vector/hand-drawn-retro-label-collection_34801403.htm#page=7&query=%EB%B9%88%ED%8B%B0%EC%A7%80%20%EC%BA%90%EB%A6%AD%ED%84%B0&position=25&from_view=search&track=ais">Freepik</a>
-    Image by <a href="https://www.freepik.com/free-psd/poster-template-with-modern-vintage-design-soft-drinks_12454412.htm#page=5&query=%EC%BA%90%EB%A6%AD%ED%84%B0%20%ED%8F%AC%EC%8A%A4%ED%84%B0&position=27&from_view=search&track=ais">Freepik</a>
-    -->
-    <div id="wrap">
-        <nav class="nav">
-            <a href="#">Nuri's porfolio</a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+	<!-- partial:index.partial.html -->
+	<nav class="nav">
+		<a href="#">Nuri's portfolio</a>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</nav>
+
+	<div class="main">
+
+		<div class="content">
+			<!-- <img src="img/sky.jpg" alt="sky" class="sky"> -->
+
+			<div class="leaflet_wrap">
+				<div class="leaflet">
+					<div class="front">
+						<h2>Leaflet of <span>portfolio</span></h2>
+						<img src="img/heart.png" alt="heart" class="heart">
+						<img src="img/planet.png" alt="planet" class="planet">
+					</div>
+					<div class="back">
+						<div>
+							<h2>Table of Contents</h2>
+							<div>
+								<img src="img/stars.png" alt="stars" class="stars">
+								<img src="img/earth2.png" alt="earth" class="earth">
+							</div>
+						</div>
+						<p>
+							&nbsp;&nbsp;포트폴리오의 컨셉은 &#60; 전시회 &#62; 입니다. <br>
+							&nbsp;&nbsp;그동안 배우며 만든 프로젝트들을 전시한다는 마음으로 액자에 담아 만들었습니다. <br>
+							&nbsp;&nbsp;저의 성장 과정이 담긴 프로젝트들을 눈여겨 봐주신다면 감사하겠습니다!
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_txt">
+				<p>세상을 누리다</p>
+				<h1>
+					<span>E</span>
+					<span>n</span>
+					<span>j</span>
+					<span>o</span>
+					<span>y</span>
+					<span></span>
+					<span>t</span>
+					<span>h</span>
+					<span>e</span>
+					<span></span>
+					<span>w</span>
+					<span>o</span>
+					<span>r</span>
+					<span>l</span>
+					<span>d</span>
+					<span>!</span>
+				</h1>
+				<h2>Welcome to <span>my</span> porfolio
+					<!-- <i class="fa-regular fa-face-smile"></i> -->
+				</h2>
+			</div>
 
 
-
-        <section class="section sec1">
-            <div class="content">
-                <img src="img/sky.jpg" alt="sky" class="sky">
-                <img src="img/stars.png" alt="stars" class="stars">
-                <img src="img/earth2.png" alt="earth" class="earth">
-                <!-- <img src="img/cactus.png" alt="cactus">
-                <img src="img/music.png" alt="musical note">
-                <img src="img/music2.png" alt="musical note"> -->
-
-                <div class="main_txt">
-                    <p>세상을 누리다</p>
-                    <h1>
-                        <span>E</span>
-                        <span>n</span>
-                        <span>j</span>
-                        <span>o</span>
-                        <span>y</span>
-                        <span></span>
-                        <span>t</span>
-                        <span>h</span>
-                        <span>e</span>
-                        <span></span>
-                        <span>w</span>
-                        <span>o</span>
-                        <span>r</span>
-                        <span>l</span>
-                        <span>d</span>
-                        <span>!</span>
-                    </h1>
-                    <h2>Welcome to <span>my</span> porfolio <i class="fa-regular fa-face-smile"></i></h2>
-                </div>
+			<!-- <div class="ambition">
+				<p>
+					&nbsp;&nbsp;안녕하십니까! 맡은일에 최선을 다하는 <span>강누리</span>입니다. <br>
+					&nbsp;&nbsp;항상 똑같은 구상을 하는것보다 <span>새로운 시도</span>를 하려고 합니다. <br>
+					어려운 일이 있더라도 <span>성장할 수 있는 기회</span>로 받아들여 저의 것으로 <br>
+					만들기 위해 노력하고 있습니다. <br>
+					&nbsp;&nbsp;항상 <span>웃음을 가진 표정</span>으로 <span>긍정적인 모습</span>을 보여드리겠습니다.<br>
+				</p>
+			</div> -->
+		</div>
+	</div>
 
 
-                <div class="ambition">
-                    <p>
-                        &nbsp;&nbsp;안녕하십니까! 맡은일에 최선을 다하는 <span>강누리</span>입니다. <br>
-                        &nbsp;&nbsp;항상 똑같은 구상을 하는것보다 <span>새로운 시도</span>를 하려고 합니다. <br>
-                        어려운 일이 있더라도 <span>성장할 수 있는 기회</span>로 받아들여 저의 것으로 <br>
-                        만들기 위해 노력하고 있습니다. <br>
-                        &nbsp;&nbsp;항상 <span>웃음을 가진 표정</span>으로 <span>긍정적인 모습</span>을 보여드리겠습니다.<br>
-                    </p>
-                </div>
-            </div>
-        </section>
+	<div class="wrapper" id="js-wrapper">
+
+		<div class="sections" id="js-slideContainer">
+			<div class="vertical">
+				<section class="section section1">
+				</section>
 
 
+				<section class="section section5">
+					<div class="contact">
+						<div class="light_box">
+							<h2>Contact me</h2>
+							<img src="img/bulb.png" alt="bulb">
+							<img src="img/bulb_light.png" alt="bulb_light">
+							<img src="img/bulb_light2.png" alt="bulb_light">
+							<img src="img/bulb_light3.png" alt="bulb_light">
+						</div>
 
-        <section class="section container">
-            <div class="g_content">
-                <div class="page page2">
-                    <div class="s2_img">
-                        <img src="img/paper.jpg" alt="paper">
-                        <img src="img/clip.png" alt="clip">
-                        <img src="img/clip2.png" alt="clip">
+						<div class="line"></div>
+						<div class="line line2"></div>
 
-                        <!-- <div class="post postIt">
-                            <img src="img/postIt.png" alt="postIt">
-                            <p>My ambition</p>
-                        </div> -->
+						<p>E-mail : <span>gnr9706@gmail.com / gnr0118@icloud.com</span> </p>
+						<p>Phone number : 010 - 2911 - 9053</p>
 
-                        <div class="post postIt">
-                            <img src="img/postIt2.png" alt="postIt">
-                            <p>My project</p>
-                        </div>
+						<div class="sns">
+							<a href="https://www.instagram.com/nuun.ri/" target="_blank" class="insta">
+								<i class="fa-brands fa-instagram"></i>
+								<p>@nuun.ri</p>
+							</a>
 
-                        <div class="introduce">
-                            <div class='myImg'>
-                                <img src="img/me2.jpg" alt="me">
-                                <img src="img/heart.png" alt="heart">
-                            </div>
-
-                            <div class="myInfo">
-                                <img src="img/star.png" alt="star">
-                                <div class="myInfo_hidden">
-                                    <p>이름 : 강누리</p>
-                                    <p>생년월일 : 2001 . 01 .18</p>
-                                    <p>거주지 : 수원시 장안구</p>
-                                    <p>자격증 : 웹디자인 기능사</p>
-                                    <p>지원분야 : 프론트엔드 개발자, 웹퍼블리셔</p>
-                                </div>
-
-                                <div class="myInfo_visible">
-                                    <h2>About me</h2>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-
-                                    <div class="skill">
-                                        <h4>기술 : </h4>
-                                        <div class="skill_box">
-                                            <div>
-                                                <i class="fa-brands fa-html5"></i>
-                                                <span>HTML</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <i class="fa-brands fa-css3-alt"></i>
-                                                <span>CSS</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <i class="fa-brands fa-sass"></i>
-                                                <span>SCSS</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <i class="fa-brands fa-square-js"></i>
-                                                <span>JavaScript</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <img src="img/logo-jquery.png" alt="jquery">
-                                                <span>jQuery</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <i class="fa-brands fa-react"></i>
-                                                <span>React</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <i class="fa-brands fa-bootstrap"></i>
-                                                <span>Bootstrap</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <img src="img/AJAX_logo_by_gengns.svg.png" alt="AJAX">
-                                                <span>AJAX</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <img src="img/jsx.png" alt="jsx">
-                                                <span>JSX</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <img src="img/JSON2.png" alt="JSON">
-                                                <span>JSON</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <img src="img/react-redux.png" alt="redux">
-                                                <span>Redux</span>
-                                            </div>
-                                           
-                                            <div>
-                                                <img src="img/mysql-logo.png" alt="mysql">
-                                                <span>MySQL</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="show_post">
-                        <!-- <div class="myAmbition">
-                            <img src="img/note5.png" alt="note">
-                            <img src="img/heart.png" alt="heart">
-                            <p>
-                                &nbsp;&nbsp;안녕하십니까! 맡은일에 최선을 다하는 강누리입니다. <br>
-                                &nbsp;&nbsp;항상 똑같은 구상을 하는것보다 새로운 시도를 하려고 합니다. <br>
-                                어려운 일이 있더라도 성장할 수 있는 기회로 받아들여 저의 것으로 <br>
-                                만들기 위해 노력하고 있습니다. <br>
-                                &nbsp;&nbsp;항상 웃음을 가진 표정으로 긍정적인 모습을 보여드리겠습니다.<br>
-                            </p>
-                        </div> -->
-
-
-                        <div class="post_click">
-                            <img src="img/arrow3.png" alt="arrow">
-                            <h2>Click here!</h2>
-                        </div>
-
-
-                        <div class="my_project">
-                            <img src="img/hiSun.png" alt="sun" class="hiSun">
-
-                            <div class="pj_intro">
-                                <img src="img/letters.png" alt="letters">
-                                <p>
-                                    &nbsp;&nbsp;포트폴리오의 컨셉은 &#60; 전시회 &#62; 입니다. <br><br>
-                                    &nbsp;&nbsp;그동안 배우며 만든 프로젝트들을 전시한다는 마음으로 <br> 액자에 담아 만들었습니다. <br><br>
-                                    &nbsp;&nbsp;저의 성장 과정이 담긴 프로젝트들을 눈여겨 봐주신다면 <br> 감사하겠습니다! <br>
-                                </p>
-                                <div class="go_pj_btn">
-                                    <div class="button-container">
-                                        <span class="mask">Going to see it</span>
-                                        <button>Going to see it</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <img src="img/arrow.png" alt="arrow" class="arrow">
-
-                            <div class="pj_ticket">
-                                <div>
-                                    <div class="left_ticket">
-                                        <img src="img/me6.jpg" alt="black">
-                                        <h3><span>Would you like to go</span> see my project?</h3>
-                                    </div>
-                                    <div class="orangeBox"> Nuri's </div>
-                                </div>
-                                <div>
-                                    <div class="right_ticket">
-                                        <img src="img/earth3.png" alt="earth">
-                                        <h6>Chapter1. React project</h6>
-                                        <h6>Chapter2. Open API</h6>
-                                        <h6>Chapter3. Team project</h6>
-                                        <h6>Chapter4. One page</h6>
-                                        <h6>Chapter5. Responsive web disign</h6>
-                                        <h6>Chapter6. Shopping mall web disign</h6>
-                                    </div>
-                                    <div class="orangeBox">Exhibition</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="page page3">
-                    <img src="img/sun.png" alt="sun" class="sun">
-
-                    <div class="fila">
-                        <div class="p3_img">
-                            <a href="https://nuunnunn.github.io/project_6/"><img src="img/fila.png" alt="fila"></a>
-                            <img src="img/frame.png" alt="frame">
-                        </div>
-                    </div>
-                </div>
-                <div class="page page4">a</div>
-
-            </div>
-
-        </section>
-
-
-
-        <div class="page5">
-            <div class="contact">
-                <div class="light_box">
-                    <h2>Contact me</h2>
-                    <img src="img/bulb.png" alt="bulb">
-                    <img src="img/bulb_light.png" alt="bulb_light">
-                    <img src="img/bulb_light2.png" alt="bulb_light">
-                    <img src="img/bulb_light3.png" alt="bulb_light">
-                </div>
-
-                <div class="line"></div>
-                <div class="line line2"></div>
-
-                <p>E-mail : <span>gnr9706@gmail.com / gnr0118@icloud.com</span> </p>
-                <p>Phone number : 010 - 2911 - 9053</p>
-
-                <div class="sns">
-                    <a href="https://www.instagram.com/nuun.ri/" target="_blank" class="insta">
-                        <i class="fa-brands fa-instagram"></i>
-                        <p>@nuun.ri</p>
-                    </a>
-
-                    <a href="https://github.com/nuunnunn" target="_blank" class="gitHub">
-                        <i class="fa-brands fa-github"></i>
-                        <p>nuunnunn</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+							<a href="https://github.com/nuunnunn" target="_blank" class="gitHub">
+								<i class="fa-brands fa-github"></i>
+								<p>nuunnunn</p>
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
 
 
 
 
-    <script src="js/jsap.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/scroll.js"></script>
+
+			<div class="horizontal">
+				<section class="section section2">
+					<span class="section__title" id="title2">Section Two</span>
+					<span id="trigger--title2"></span>
+				</section>
+
+
+				<section class="section section3">
+					<img src="img/sun.png" alt="sun" class="sun">
+				</section>
+
+
+				<section class="section section4">
+					<span class="section__title" id="title4">Section Four</span>
+					<span id="trigger--title4"></span>
+				</section>
+			</div>
+
+		</div>
+	</div>
+	<!-- partial -->
+	<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js'></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/scrollMagic.js"></script>
+
 </body>
 
 </html>

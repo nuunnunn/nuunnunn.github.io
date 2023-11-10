@@ -52,12 +52,6 @@ html {
   width: 100%;
 }
 
-.section {
-  height: 100%;
-  width: 33.3333333333%;
-  position: relative;
-}
-
 .nav {
   width: 100%;
   height: 100px;
@@ -295,14 +289,11 @@ html {
   height: calc(100% - 90px);
   padding: 20px 18px;
   font-size: 1.5rem;
-  color: #fe4818;
+  color: #333;
   line-height: 20px;
   font-family: "GOSEONGGEUMGANGNURI";
   border: 2px solid #333;
   border-top: none;
-}
-.main .content .leaflet_wrap .leaflet > div.back > div:not(.pj_ticket) > div:last-of-type span {
-  color: #fe6a6a;
 }
 .main .content .leaflet_wrap .leaflet > div.back > p {
   width: 100%;
@@ -324,6 +315,15 @@ html {
   left: 12%;
   font-family: "Noto Serif Kr", sans-serif;
   color: #fe4818;
+  animation: ticket 2s 12s 2 alternate;
+}
+@keyframes ticket {
+  50% {
+    transform: rotate(-90deg) translateY(200px);
+  }
+  100% {
+    transform: rotate(-70deg) translateY(200px);
+  }
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div {
   background: #ddd9d8;
@@ -340,44 +340,53 @@ html {
   border-bottom: 1px dashed #aaa;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.top_ticket img {
-  width: 120px;
-  height: 160px;
+  width: 135px;
+  height: 175px;
   border-radius: 10px;
   position: absolute;
-  top: 7%;
-  left: 10%;
+  top: 3%;
+  left: 5%;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.top_ticket h3 {
   position: absolute;
   bottom: 18%;
-  left: 10%;
+  left: 5%;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.top_ticket h5 {
   position: absolute;
   bottom: 5%;
-  left: 10%;
+  left: 5%;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.top_ticket h5 span {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.bottom_ticket {
   width: 100%;
   height: 30%;
-  padding: 30px 15px 15px;
   position: relative;
   border-radius: 15px 15px 0px 15px;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.bottom_ticket h6 {
   position: absolute;
   top: 10%;
+  left: 5%;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.bottom_ticket h6 i {
   color: #02554b;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.bottom_ticket p {
   font-size: 0.3rem;
-  width: 95%;
+  width: 91%;
   line-height: 8px;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+.main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.bottom_ticket img {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
 }
 .main .content .main_txt {
   width: 100%;
@@ -469,6 +478,12 @@ html {
   font-size: 3rem;
 }
 
+.section {
+  height: 100%;
+  width: 33.3333333333%;
+  position: relative;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -485,9 +500,6 @@ html {
   height: 100%;
   display: flex;
   justify-content: space-between;
-}
-.wrapper .sections .vertical .section1 {
-  background: #7b9d7c;
 }
 .wrapper .sections .vertical .section5 {
   background: #d6cbaf;
@@ -623,7 +635,18 @@ html {
   display: flex;
 }
 .wrapper .sections .horizontal .section2 {
-  border: 2px solid #F9690E;
+  background: #e7dcc0;
+  box-shadow: 0 -2px 0 #e7dcc0;
+  overflow: hidden;
+}
+.wrapper .sections .horizontal .section2 .entry {
+  width: 120%;
+  height: 30%;
+  background: #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: perspective(500px) rotateY(20deg);
 }
 .wrapper .sections .horizontal .section3 {
   border: 2px solid #9B59B6;
@@ -631,8 +654,7 @@ html {
 .wrapper .sections .horizontal .section3 .sun {
   width: 10%;
   position: absolute;
-  bottom: 5%;
-  left: -280px;
+  bottom: 10%;
   transition: 0.5s;
   z-index: 500;
 }

@@ -1,3 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Archivo+Black&family=Black+Han+Sans&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400&family=Coiny&family=Gasoek+One&family=Gowun+Batang&family=Grandiflora+One&family=Gugi&family=Hahmlet:wght@100&family=IBM+Plex+Sans+KR:wght@300&family=Lilita+One&family=Lobster&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@200;300;400;900&family=Orbit&family=Paytone+One&family=Prompt:wght@500&family=Titan+One&display=swap");
+@font-face {
+  font-family: "PartialSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RixInooAriDuriR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GOSEONGGEUMGANGNURI";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Se-hwa";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/Se-hwa.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +43,7 @@ ul, li, ol {
 
 a {
   text-decoration: none;
-  color: #fed4d5;
+  color: #f9a42d;
 }
 
 body,

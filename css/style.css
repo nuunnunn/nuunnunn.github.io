@@ -385,7 +385,7 @@ html {
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket > div.bottom_ticket img {
   width: 30%;
   position: absolute;
-  right: 10%;
+  right: 5%;
   bottom: 5%;
 }
 .main .content .main_txt {
@@ -482,6 +482,7 @@ html {
   height: 100%;
   width: 33.3333333333%;
   position: relative;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -492,7 +493,7 @@ html {
   background: #02554b;
 }
 .wrapper .sections {
-  width: 100%;
+  width: 102%;
   height: 105vh;
 }
 .wrapper .sections .vertical {
@@ -636,20 +637,163 @@ html {
 }
 .wrapper .sections .horizontal .section2 {
   background: #e7dcc0;
-  box-shadow: 0 -2px 0 #e7dcc0;
-  overflow: hidden;
 }
-.wrapper .sections .horizontal .section2 .entry {
-  width: 120%;
-  height: 30%;
+.wrapper .sections .horizontal .section2 > div {
+  position: absolute;
+  color: #ddd9d8;
+  font-family: "Lilita One", sans-serif;
+  box-shadow: 0px 0px 20px rgba(95, 95, 95, 0.2);
+}
+.wrapper .sections .horizontal .section2 > div h2 {
+  color: #fe4818;
+}
+.wrapper .sections .horizontal .section2 > div:first-of-type, .wrapper .sections .horizontal .section2 > div:nth-of-type(3), .wrapper .sections .horizontal .section2 > div:last-of-type {
+  background: #777163;
+  top: -8%;
+  border-bottom: 1px solid #333;
+}
+.wrapper .sections .horizontal .section2 > div:first-of-type {
+  width: 20%;
+  height: 81.1%;
+  transform: perspective(300px) rotateY(20deg);
+  left: 0;
+}
+.wrapper .sections .horizontal .section2 > div:nth-of-type(3) {
+  width: 17%;
+  height: 60.51%;
+  transform: perspective(300px) rotateY(35deg);
+  left: 47.3%;
+}
+.wrapper .sections .horizontal .section2 > div.info, .wrapper .sections .horizontal .section2 > div.skill {
+  background: #333;
+}
+.wrapper .sections .horizontal .section2 > div.info {
+  width: 28%;
+  height: 66%;
+  top: 0;
+  left: 17.75%;
+  padding: 40px 90px;
+}
+.wrapper .sections .horizontal .section2 > div.info .hidden_info {
+  display: none;
+}
+.wrapper .sections .horizontal .section2 > div.info .visible_info {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.wrapper .sections .horizontal .section2 > div.info .visible_info img {
+  width: 50%;
+  padding-bottom: 20px;
+}
+.wrapper .sections .horizontal .section2 > div.info .visible_info h2 {
+  font-size: 4rem;
+  padding-bottom: 20px;
+}
+.wrapper .sections .horizontal .section2 > div.info .visible_info p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  font-family: "GOSEONGGEUMGANGNURI";
+}
+.wrapper .sections .horizontal .section2 > div.skill {
+  width: 22%;
+  height: 45.3%;
+  top: 0;
+  right: 16.9%;
+  padding: 40px;
+}
+.wrapper .sections .horizontal .section2 > div.skill h2 {
+  font-size: 2.5rem;
+  padding-bottom: 30px;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  opacity: 0;
+  transition: 2s;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div {
+  width: 30%;
+  font-size: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div i {
+  font-size: 2rem;
+  width: 100%;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div span {
+  display: inline-block;
+  width: 100%;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div img {
+  width: 100%;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(5) img {
+  width: 50%;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(8) img {
+  width: 45%;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(9) img {
+  width: 25%;
+  border-radius: 3px;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(10) img {
+  width: 26%;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(11) img {
+  width: 25%;
+}
+.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:last-of-type img {
+  width: 40%;
+}
+.wrapper .sections .horizontal .section2 > div:last-of-type {
+  width: 22.2%;
+  height: 66.7%;
+  right: 0;
+  top: -11%;
+  transform: perspective(300px) rotateY(-40deg);
+}
+.wrapper .sections .horizontal .section2 > div:last-of-type .entry {
+  width: 60px;
+  height: 120px;
   background: #333;
   position: absolute;
+  bottom: 0%;
+  right: 0%;
+  transform: perspective(500px);
+}
+.wrapper .sections .horizontal .section2 > h1 {
+  width: 100%;
+  color: #fe4818;
+  position: absolute;
   bottom: 0;
-  left: 0;
-  transform: perspective(500px) rotateY(20deg);
+  left: 28.5%;
+  transform: perspective(500px) rotateY(10deg) rotateX(40deg) rotateZ(-5deg);
+  font-size: 11rem;
+  font-family: "PartialSansKR-Regular";
+  letter-spacing: 15px;
+  background: #333;
+}
+.wrapper .sections .horizontal .section2 > img {
+  width: 5%;
+  position: absolute;
+  bottom: 27%;
+  right: -2%;
 }
 .wrapper .sections .horizontal .section3 {
-  border: 2px solid #9B59B6;
+  background: #e7dcc0;
+  perspective: 500px;
 }
 .wrapper .sections .horizontal .section3 .sun {
   width: 10%;
@@ -657,6 +801,20 @@ html {
   bottom: 10%;
   transition: 0.5s;
   z-index: 500;
+  display: block;
+}
+.wrapper .sections .horizontal .section3 > div {
+  position: absolute;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type {
+  width: 50%;
+  height: 70%;
+  background: #7b9d7c;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+  transform: rotateY(10deg);
 }
 .wrapper .sections .horizontal .section4 {
   border: 2px solid #03C9A9;

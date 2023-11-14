@@ -129,7 +129,7 @@ $(window).scroll(function () {
 
 
     //타이핑
-    if(1500 < currentScrollTop && currentScrollTop < 2800){
+    if(1300 < currentScrollTop && currentScrollTop < 2800){
         if (typingBool == false) { // 타이핑이 진행되지 않았다면 
             typingBool = true;
             tyInt = setInterval(typing, 80); // 반복동작 

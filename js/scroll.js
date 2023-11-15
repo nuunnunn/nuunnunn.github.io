@@ -137,13 +137,13 @@ $(window).scroll(function () {
     }
 
 
-    //ticket 구멍 색 변함
-    // if(currentScrollTop < 750){
-    //     $('.bottom_ticket').find('h6').children('i').css({color:'#02554b'})
-    // }
-    // else if(750 < currentScrollTop){
-    //     $('.bottom_ticket').find('h6').children('i').css({color:'#7b9d7c'})
-    // }
+    // ticket 구멍 색 변함
+    if(currentScrollTop < 750){
+        $('.bottom_ticket').find('h6').children('i').css({color:'#02554b'})
+    }
+    else if(750 < currentScrollTop){
+        $('.bottom_ticket').find('h6').children('i').css({color:'#7b9d7c'})
+    }
 
     // 입구 이미지
     if(2900 > currentScrollTop){

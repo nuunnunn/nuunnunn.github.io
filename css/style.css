@@ -18,14 +18,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Se-hwa";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/Se-hwa.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GangwonEduSaeeum_OTFMediumA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,7 +37,7 @@ ul, li, ol {
 
 a {
   text-decoration: none;
-  color: #f9a42d;
+  color: #000;
 }
 
 body,
@@ -68,6 +62,7 @@ html {
 }
 .nav a {
   font-size: 2rem;
+  color: #f9a42d;
 }
 .nav .hamburger {
   width: 20px;
@@ -231,7 +226,6 @@ html {
 }
 .main .content .leaflet_wrap .leaflet > div.back {
   background: #fe6a6a;
-  font-family: "GangwonEduSaeeum_OTFMediumA";
   padding: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -288,10 +282,9 @@ html {
   width: 100%;
   height: calc(100% - 90px);
   padding: 20px 18px;
-  font-size: 1.5rem;
   color: #333;
   line-height: 20px;
-  font-family: "GOSEONGGEUMGANGNURI";
+  font-family: "GmarketSansMedium";
   border: 2px solid #333;
   border-top: none;
 }
@@ -299,10 +292,11 @@ html {
   width: 100%;
   height: 120px;
   background: #333;
-  padding: 17px;
+  padding: 16px;
   border-radius: 0 0 10px 10px;
-  font-family: "GOSEONGGEUMGANGNURI";
-  font-size: 1rem;
+  font-family: "GmarketSansMedium";
+  font-size: 0.75rem;
+  line-height: 18px;
   color: #fe6a6a;
 }
 .main .content .leaflet_wrap .leaflet > div.back .pj_ticket {
@@ -398,7 +392,7 @@ html {
 .main .content .main_txt p {
   font-size: 1rem;
   margin: 0px 0px -50px 15px;
-  font-family: "RixInooAriDuriR";
+  font-family: "PartialSansKR-Regular";
 }
 .main .content .main_txt h1 {
   color: #fe4818;
@@ -694,7 +688,7 @@ html {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   opacity: 0;
-  font-family: "GOSEONGGEUMGANGNURI";
+  font-family: "GmarketSansMedium";
 }
 .wrapper .sections .horizontal .section2 > div.skill {
   width: 22%;
@@ -764,9 +758,42 @@ html {
   transform: perspective(300px) rotateY(-40deg);
   border-bottom: 1px solid #333;
 }
-.wrapper .sections .horizontal .section3 {
-  perspective: 500px;
+.wrapper .sections .horizontal .project {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper .sections .horizontal .project > div:first-of-type {
+  display: block;
   font-family: "GOSEONGGEUMGANGNURI";
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.wrapper .sections .horizontal .project > div:first-of-type::after {
+  content: "Hover";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 1s;
+  color: #f9a42d;
+}
+.wrapper .sections .horizontal .project > div:first-of-type:hover::after {
+  background: none;
+  content: "Click to see more";
+}
+.wrapper .sections .horizontal .project > div:first-of-type img {
+  width: 100%;
+  transition: 5s;
+}
+.wrapper .sections .horizontal .project > div:last-of-type {
+  font-family: "GmarketSansMedium";
+}
+.wrapper .sections .horizontal .section3 {
+  perspective: 1000px;
 }
 .wrapper .sections .horizontal .section3 .sun {
   width: 10%;
@@ -780,104 +807,415 @@ html {
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .wrapper .sections .horizontal .section3 > div:first-of-type {
-  width: 46.6%;
-  height: 75.5%;
+  width: 48%;
+  height: 73%;
   background: #7b9d7c;
-  top: -8%;
-  left: 7.3%;
-  border-bottom: 1px solid #333;
+  top: -4%;
+  left: 3.5%;
   transform: rotateY(10deg);
+  border-bottom: 1px solid #333;
+  border-left: 1px solid #333;
+  border-right: 2px solid #333;
+  justify-content: flex-end;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:first-of-type {
-  width: 40%;
-  height: 65%;
-  border: 1px solid #333;
-  display: flex;
-  flex-wrap: wrap;
+.wrapper .sections .horizontal .section3 > div:first-of-type .project {
+  width: 70%;
+  height: 70%;
+  align-content: flex-end;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type {
+  width: 500px;
+  height: 284px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type::after {
+  padding: 24% 43%;
+  font-size: 1.7rem;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type:hover::after {
+  padding: 24% 30%;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type:hover img {
+  transform: translateY(-85.5%);
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type {
+  width: 230px;
+  height: 150px;
+  background: #eee;
+  border-top: 3px outset #ccc;
+  border-left: 3px outset #ccc;
+  position: relative;
+  padding: 20px;
+  box-shadow: 5px 5px rgba(95, 95, 95, 0.2);
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type h4 {
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type h5 {
+  width: 100%;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type h5:last-of-type {
+  border-bottom: 2px solid #333;
+  padding-bottom: 15px;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type p {
+  position: absolute;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type p:first-of-type {
+  bottom: 40px;
+  right: 20px;
+  font-size: 0.5rem;
+}
+.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type p:last-of-type {
+  bottom: 20px;
+  right: 20px;
+  font-size: 0.7rem;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type {
+  width: 54.3%;
+  height: 70.5%;
+  background: #b3ceb3;
+  top: -4.5%;
+  right: -4.85%;
+  border-bottom: 1px solid #333;
+  border-right: 2px solid #333;
+  transform: rotateY(10deg);
   justify-content: center;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type {
+  width: 50%;
+  height: 60%;
   align-content: center;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:first-of-type > div:first-of-type {
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type {
+  width: 330px;
+  height: 180px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type::after {
+  padding: 60px 150px;
+  font-size: 1.4rem;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type:hover::after {
+  padding: 60px 120px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type:hover img {
+  transform: translateY(-640px);
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type {
+  width: 358px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type h2 {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type p:first-of-type {
+  font-size: 0.6rem;
+  line-height: 20px;
+  width: 174px;
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type p:not(:first-of-type) {
+  font-size: 0.7rem;
+  line-height: 20px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type p:last-of-type {
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type a {
+  font-size: 0.7rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type {
+  width: 45%;
+  height: 85%;
+  align-content: flex-end;
+  padding-left: 40px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a {
   width: 300px;
-  height: 160px;
-  overflow: hidden;
-  border: 10px ridge #5f4d3a;
-  cursor: pointer;
+  height: 157px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
   position: relative;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:first-of-type > div:first-of-type::after {
-  content: "hover";
-  display: inline-block;
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a::after {
+  padding: 60px 120px;
+  font-size: 1.3rem;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a:hover::after {
+  padding: 60px 85px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a:hover > img:first-of-type {
+  opacity: 0;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a:hover > img:last-of-type {
+  opacity: 1;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a > img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3);
   transition: 1s;
-  color: #f9a42d;
-  font-size: 1.3rem;
-  padding: 50px 115px;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:first-of-type > div:first-of-type img {
-  width: 100%;
-  transition: 5s;
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a > img:first-of-type {
+  opacity: 1;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:first-of-type > div:first-of-type:hover::after {
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a > img:last-of-type {
   opacity: 0;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:first-of-type > div:first-of-type:hover img {
-  transform: translateY(-920px);
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div {
+  width: 100%;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:first-of-type > div:last-of-type {
-  width: 50%;
-  height: 40%;
-  background: #fff;
-  box-shadow: 5px 5px 10px #586d59;
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div h2 {
+  font-size: 1rem;
+  padding-bottom: 10px;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project:last-of-type {
-  width: 55%;
-  height: 70%;
-  border: 1px solid #333;
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div h2 sub {
+  font-size: 0.6rem;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type {
-  width: 55.2%;
-  height: 70.2%;
-  background: #75aca6;
-  top: -7.2%;
-  right: -7.6%;
-  border-bottom: 1px solid #333;
-  border-left: 1px solid #333;
-  border-right: 1px solid #333;
-  transform: rotateY(8deg);
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div p:first-of-type {
+  font-size: 0.55rem;
+  line-height: 20px;
+  margin-bottom: 20px;
+  width: 182px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div p:not(:first-of-type) {
+  font-size: 0.65rem;
+  line-height: 20px;
+  width: 315px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div p:last-of-type {
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div a {
+  font-size: 0.7rem;
+  padding: 10px;
+  border-radius: 10px;
 }
 .wrapper .sections .horizontal .section4 {
   overflow: hidden;
-  perspective: 500px;
+  perspective: 1000px;
 }
 .wrapper .sections .horizontal .section4 > div {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .wrapper .sections .horizontal .section4 > div:first-of-type {
-  width: 47.5%;
-  height: 67.5%;
-  background: #7b9d7c;
-  top: -8%;
-  left: 7.5%;
+  width: 52.3%;
+  height: 70.2%;
+  background: #81c0b5;
+  top: -4.2%;
+  left: -4.8%;
   border-bottom: 1px solid #333;
-  transform: rotateY(10deg);
+  transform: rotateY(-10deg);
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type {
+  width: 45%;
+  height: 70%;
+  align-content: flex-start;
+  padding-left: 0px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a {
+  width: 360px;
+  height: 180px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a::after {
+  padding: 60px 150px;
+  font-size: 1.4rem;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a:hover::after {
+  padding: 60px 120px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a:hover img {
+  transform: translateY(-640px);
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div {
+  width: 82%;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div h2 {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div p:first-of-type {
+  font-size: 0.6rem;
+  line-height: 20px;
+  width: 174px;
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div p:not(:first-of-type) {
+  font-size: 0.7rem;
+  line-height: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div p:last-of-type {
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div a {
+  font-size: 0.7rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type {
+  width: 30%;
+  height: 65%;
+  align-content: flex-end;
+  padding-left: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a {
+  width: 300px;
+  height: 174px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a::after {
+  padding: 60px 120px;
+  font-size: 1.3rem;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a:hover::after {
+  padding: 60px 85px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a:hover img {
+  transform: translateY(-910px);
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div {
+  width: 100%;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div h2 {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div p:first-of-type {
+  font-size: 0.55rem;
+  line-height: 20px;
+  margin-bottom: 20px;
+  width: 182px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div p:not(:first-of-type) {
+  font-size: 0.65rem;
+  line-height: 20px;
+  width: 315px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div p:last-of-type {
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div a {
+  font-size: 0.7rem;
+  padding: 10px;
+  border-radius: 10px;
 }
 .wrapper .sections .horizontal .section4 > div:last-of-type {
-  width: 54.2%;
-  height: 64.5%;
+  width: 50.4%;
+  height: 72.7%;
   background: #75aca6;
-  top: -7.5%;
-  right: -7.4%;
+  top: -4%;
+  right: 3.3%;
   border-bottom: 1px solid #333;
   border-left: 1px solid #333;
-  border-right: 1px solid #333;
-  transform: rotateY(8deg);
+  transform: rotateY(-8deg);
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type {
+  width: 45%;
+  height: 70%;
+  align-content: flex-start;
+  padding-left: 0px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a {
+  width: 360px;
+  height: 180px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a::after {
+  padding: 60px 150px;
+  font-size: 1.4rem;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a:hover::after {
+  padding: 60px 120px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a:hover img {
+  transform: translateY(-640px);
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div {
+  width: 82%;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div h2 {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div p:first-of-type {
+  font-size: 0.6rem;
+  line-height: 20px;
+  width: 174px;
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div p:not(:first-of-type) {
+  font-size: 0.7rem;
+  line-height: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div p:last-of-type {
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div a {
+  font-size: 0.7rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type {
+  width: 30%;
+  height: 65%;
+  align-content: flex-end;
+  padding-left: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a {
+  width: 300px;
+  height: 174px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a::after {
+  padding: 60px 120px;
+  font-size: 1.3rem;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a:hover::after {
+  padding: 60px 85px;
+  content: "click to video";
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a video {
+  width: 100%;
+  display: block;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div {
+  width: 100%;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div h2 {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div p:first-of-type {
+  font-size: 0.55rem;
+  line-height: 20px;
+  margin-bottom: 20px;
+  width: 182px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div p:not(:first-of-type) {
+  font-size: 0.65rem;
+  line-height: 20px;
+  width: 315px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div p:last-of-type {
+  margin-bottom: 20px;
+}
+.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div a {
+  font-size: 0.7rem;
+  padding: 10px;
+  border-radius: 10px;
 }

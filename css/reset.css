@@ -18,14 +18,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Se-hwa";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/Se-hwa.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GangwonEduSaeeum_OTFMediumA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,7 +37,7 @@ ul, li, ol {
 
 a {
   text-decoration: none;
-  color: #f9a42d;
+  color: #000;
 }
 
 body,

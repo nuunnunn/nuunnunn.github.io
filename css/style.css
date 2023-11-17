@@ -491,38 +491,29 @@ html {
   background: #02554b;
 }
 .wrapper .sections .vertical .section5 {
-  background: #e7dcc0;
+  background: #02554b;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 100px 0 0 100px;
-}
-.wrapper .sections .vertical .section5 .light_box {
-  width: 100%;
-  height: 100%;
   font-family: "Lilita One", sans-serif;
 }
-.wrapper .sections .vertical .section5 .light_box:hover ~ .line {
-  animation: line 2s 1 forwards;
+.wrapper .sections .vertical .section5 .light_box {
+  width: 540px;
+  height: 455px;
 }
-.wrapper .sections .vertical .section5 .light_box:hover ~ .line2 {
-  animation-delay: 0.3s;
-}
-@keyframes line {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 40%;
-  }
-}
-.wrapper .sections .vertical .section5 .light_box h2 {
-  font-size: 3.5rem;
+.wrapper .sections .vertical .section5 .light_box > h2 {
+  font-size: 5rem;
+  color: #f9a42d;
+  text-align: right;
   cursor: pointer;
   transition: 1s;
 }
-.wrapper .sections .vertical .section5 .light_box h2:hover ~ img {
-  animation: bulb 2s ease infinite 2s;
+.wrapper .sections .vertical .section5 .light_box > h2:hover ~ img {
+  animation: bulb 2s ease infinite;
+}
+.wrapper .sections .vertical .section5 .light_box > h2 span {
+  color: #fe4818;
 }
 .wrapper .sections .vertical .section5 .light_box img {
   position: absolute;
@@ -530,30 +521,30 @@ html {
   cursor: pointer;
 }
 .wrapper .sections .vertical .section5 .light_box img:first-of-type {
-  width: 5%;
-  top: -10%;
-  left: 42%;
+  width: 35px;
+  top: 17rem;
+  left: 8rem;
   opacity: 1;
 }
 .wrapper .sections .vertical .section5 .light_box img:not(:first-of-type) {
-  width: 0.5%;
+  width: 5px;
   opacity: 1;
-  height: 21.5px;
+  height: 22px;
 }
 .wrapper .sections .vertical .section5 .light_box img:nth-of-type(2) {
-  top: -15%;
-  left: 40%;
-  transform: rotate(-20deg);
+  top: 16.5rem;
+  left: 6.5rem;
+  transform: rotate(-70deg);
 }
 .wrapper .sections .vertical .section5 .light_box img:nth-of-type(3) {
-  top: -17%;
-  left: 46%;
-  transform: rotate(20deg);
+  top: 15rem;
+  left: 8rem;
+  transform: rotate(-20deg);
 }
 .wrapper .sections .vertical .section5 .light_box img:last-of-type {
-  top: -10%;
-  left: 50%;
-  transform: rotate(60deg);
+  top: 15rem;
+  left: 10rem;
+  transform: rotate(0deg);
 }
 @keyframes bulb {
   0% {
@@ -566,19 +557,68 @@ html {
     opacity: 1;
   }
 }
+.wrapper .sections .vertical .section5 .hobby {
+  width: calc(100% - 730px);
+  height: 850px;
+}
+.wrapper .sections .vertical .section5 .hobby .line_box {
+  width: 245px;
+  height: 70px;
+  margin-bottom: 50px;
+}
+.wrapper .sections .vertical .section5 .hobby .line_box:hover ~ .line {
+  animation: line 2s 1;
+}
+.wrapper .sections .vertical .section5 .hobby .line_box:hover ~ .line2 {
+  animation-delay: 0.3s;
+}
+@keyframes line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 220px;
+  }
+}
+.wrapper .sections .vertical .section5 .hobby .line_box h2 {
+  font-size: 3.5rem;
+  color: #fe4818;
+}
+.wrapper .sections .vertical .section5 .hobby p {
+  font-family: "GmarketSansMedium";
+  color: #f9a42d;
+  padding-bottom: 50px;
+}
 .wrapper .sections .vertical .section5 .line {
-  width: 27%;
+  width: 220px;
   height: 4px;
-  background: #ddd9d8;
+  background: #f9a42d;
   border-radius: 10px;
   position: absolute;
-  top: 0;
-  left: 2%;
+  top: 13rem;
+  left: 52rem;
 }
 .wrapper .sections .vertical .section5 .line2 {
-  width: 30%;
-  top: 36%;
-  left: 0%;
+  width: 240px;
+  top: 14rem;
+  left: 52rem;
+}
+.wrapper .sections .vertical .section5 .hobbySlideWrap {
+  width: 100%;
+  height: calc(100% - 215px);
+  overflow: hidden;
+}
+.wrapper .sections .vertical .section5 .hobbySlideWrap .hSlide {
+  width: 739%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.wrapper .sections .vertical .section5 .hobbySlideWrap .hSlide img {
+  width: 350px;
+  border: 5px solid #fed4d5;
+  border-radius: 50px;
 }
 .wrapper .sections .horizontal {
   width: 300%;
@@ -646,7 +686,7 @@ html {
   color: #5f4b00;
 }
 .wrapper .sections .horizontal .section2 > div.info p, .wrapper .sections .horizontal .section2 > div.info a, .wrapper .sections .horizontal .section2 > div.info i, .wrapper .sections .horizontal .section2 > div.info span {
-  color: #e7dcc0;
+  color: #f1e9d5;
 }
 .wrapper .sections .horizontal .section2 > div.info .hidden_info {
   display: none;
@@ -710,23 +750,26 @@ html {
   width: 100%;
 }
 .wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(5) img {
-  width: 50%;
+  width: 45%;
+  height: 40%;
+  align-self: flex-end;
 }
 .wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(8) img {
-  width: 45%;
+  width: 32%;
 }
 .wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(9) img {
-  width: 25%;
+  width: 20%;
+  height: 55%;
   border-radius: 3px;
 }
 .wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(10) img {
-  width: 26%;
+  width: 23%;
 }
 .wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(11) img {
-  width: 25%;
+  width: 23%;
 }
 .wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:last-of-type img {
-  width: 40%;
+  width: 30%;
 }
 .wrapper .sections .horizontal .section2 > div.info .contact {
   width: 60%;

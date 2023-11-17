@@ -44,3 +44,22 @@ popClose.forEach((e,i)=>{
         popup.children[i].style.visibility = 'hidden';
     })
 });
+
+
+// let lightSpan = document.querySelector('.lightSpan');
+// let light = document.querySelectorAll('.light');
+// lightSpan.addEventListener('mouseover',()=>{
+//     console.log(light)
+//     for(let i in light){
+//         light[i].animate({opacity: 0},{duration:500, iterations:1,})
+//     }
+// });
+
+
+const imgSlide = ()=>{
+    $('.hSlide').stop().animate({marginLeft: '-365px'},1000,()=>{
+        $('.hSlide').children('img').eq(0).appendTo('.hSlide');
+        $('.hSlide').css({marginLeft: 0})
+    });
+}
+setInterval(imgSlide,2000);

@@ -204,38 +204,55 @@
 
 
 
-            .section5 { background: #e7dcc0; display: flex; justify-content: space-between; align-items: center;
-                padding: 100px 0 0 100px;         
-                                
-                .light_box{width: 100%; height: 100%; @include lilita;
-                    &:hover ~ .line{animation: line 2s 1 forwards;}
-                    &:hover ~ .line2{animation-delay: .3s;}
-                    @keyframes line{
-                        0%{width: 0%;}
-                        100%{width: 40%;}
-                    }
-                        
-                    h2{ font-size: 3.5rem; cursor: pointer; transition: 1s;
-                        &:hover ~ img{animation: bulb 2s ease infinite 2s;}    
+            .section5 { background: $backCL; display: flex; justify-content: space-between; align-items: center;
+                padding: 100px 0 0 100px; @include lilita;         
+
+                .light_box{width: 540px; height: 455px;
+                    &>h2{ font-size: 5rem; color: $mainCL; text-align: right; cursor: pointer; transition: 1s;
+                        &:hover ~ img{animation: bulb 2s ease infinite;}    
+                        span{color: $mainCL2;}
                     }
                     img{position: absolute; transition: .5s; cursor: pointer;
-                        &:first-of-type{width: 5%; top: -10%; left: 42%; opacity: 1; }
-                        &:not(:first-of-type){width: 0.5%; opacity: 1; height: 21.5px;
+                        &:first-of-type{width: 35px; top: 17rem; left: 8rem; opacity: 1; }
+                        &:not(:first-of-type){width: 5px; opacity: 1; height: 22px;
                         }
-                        &:nth-of-type(2){top: -15%; left: 40%; transform: rotate(-20deg);}
-                        &:nth-of-type(3){top: -17%; left: 46%; transform: rotate(20deg);}
-                        &:last-of-type{top: -10%; left: 50%; transform: rotate(60deg);}
+                        &:nth-of-type(2){top: 16.5rem; left: 6.5rem; transform: rotate(-70deg);}
+                        &:nth-of-type(3){top: 15rem; left: 8rem; transform: rotate(-20deg);}
+                        &:last-of-type{top: 15rem; left: 10rem; transform: rotate(0deg);}
                         @keyframes bulb{
                             0%{opacity: 1;}
                             50%{opacity: 0.5;}
                             100%{opacity: 1;}
                         }
                     }
+                }                
+
+                .hobby{width: calc(100% - 730px); height: 850px;                        
+                                    
+                    .line_box{width: 245px; height: 70px; margin-bottom: 50px;
+                        &:hover ~ .line{animation: line 2s 1;}
+                        &:hover ~ .line2{animation-delay: .3s;}
+                        @keyframes line{
+                            0%{width: 0%;}
+                            100%{width: 220px;}
+                        }
+                            
+                        h2{ font-size: 3.5rem; color: $mainCL2; }
+                    }
+                    p{ @include gm; color: $mainCL; padding-bottom: 50px;}
                 }
         
-                .line{width: 27%; height: 4px; background: #ddd9d8; border-radius: 10px; 
-                position: absolute; top: 0; left: 2%; }
-                .line2{width: 30%; top: 36%; left: 0%;}
+                .line{width: 220px; height: 4px; background: $mainCL; border-radius: 10px; 
+                position: absolute; top: 13rem; left: 52rem; }
+                .line2{width: 240px; top: 14rem; left: 52rem;}
+
+                .hobbySlideWrap{width: 100%; height: calc(100% - 215px); overflow: hidden;
+                    .hSlide{width: 739%; height: 100%; display: flex; justify-content: space-between; align-items: flex-start;
+                        img{width: 350px; @include solid(5px,$subCL3); border-radius: 50px;
+                            // &:nth-of-type(2){margin-top: 100px; @include solid(5px,$subCL);}
+                        }
+                    }
+                }
             }
         }
 
@@ -268,7 +285,7 @@
                         @include solid(1px,$subCL2); border-top: none;
 
                         h2{color: $subCL2;}
-                        p,a,i,span{color: #e7dcc0;}
+                        p,a,i,span{color: #f1e9d5;}
                         
                         .hidden_info{display: none;}
                         .visible_info{width: 50%; height: 50%; display: block;          
@@ -285,16 +302,16 @@
     
                                 &>div{width: 30%; font-size: 1.3rem; display: flex; flex-wrap: wrap; justify-content: center;
                                     margin-bottom: 20px;
-                                    i{font-size: 2rem; width: 100%; }
+                                    i{font-size: 2rem; width: 100%;}
                                     span{display: inline-block; width: 100%; font-size: 0.9rem; align-self: flex-end;}
                                     img{width: 100%;}
     
-                                    &:nth-of-type(5){img{width: 50%;}}
-                                    &:nth-of-type(8){img{width: 45%;}}
-                                    &:nth-of-type(9){img{width: 25%; border-radius: 3px;}}
-                                    &:nth-of-type(10){img{width: 26%;}}
-                                    &:nth-of-type(11){img{width: 25%;}}
-                                    &:last-of-type{img{width: 40%;}}
+                                    &:nth-of-type(5){img{width: 45%; height: 40%; align-self: flex-end;}}
+                                    &:nth-of-type(8){img{width: 32%;}}
+                                    &:nth-of-type(9){img{width: 20%; height: 55%; border-radius: 3px;}}
+                                    &:nth-of-type(10){img{width: 23%;}}
+                                    &:nth-of-type(11){img{width: 23%;}}
+                                    &:last-of-type{img{width: 30%;}}
                                 }
                             }
                         }

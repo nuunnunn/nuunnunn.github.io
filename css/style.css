@@ -12,12 +12,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "GOSEONGGEUMGANGNURI";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "GmarketSansMedium";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
   font-weight: normal;
@@ -56,7 +50,7 @@ html {
   left: 0;
   align-items: center;
   padding: 0 50px;
-  z-index: 1000;
+  z-index: 15;
   background: transparent;
   font-family: "Agbalumo", sans-serif;
 }
@@ -494,30 +488,24 @@ html {
   overflow: hidden;
 }
 .wrapper .sections .vertical .section1 {
-  background: #7b9d7c;
+  background: #02554b;
 }
 .wrapper .sections .vertical .section5 {
-  background: #d6cbaf;
+  background: #e7dcc0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 100px 0 0 100px;
 }
-.wrapper .sections .vertical .section5 .contact {
-  width: 40%;
-  height: 50%;
-  color: #fe6a6a;
-  position: relative;
+.wrapper .sections .vertical .section5 .light_box {
+  width: 100%;
+  height: 100%;
   font-family: "Lilita One", sans-serif;
 }
-.wrapper .sections .vertical .section5 .contact .light_box {
-  width: 100%;
-  height: 30%;
-}
-.wrapper .sections .vertical .section5 .contact .light_box:hover ~ .line {
+.wrapper .sections .vertical .section5 .light_box:hover ~ .line {
   animation: line 2s 1 forwards;
 }
-.wrapper .sections .vertical .section5 .contact .light_box:hover ~ .line2 {
+.wrapper .sections .vertical .section5 .light_box:hover ~ .line2 {
   animation-delay: 0.3s;
 }
 @keyframes line {
@@ -528,49 +516,41 @@ html {
     width: 40%;
   }
 }
-.wrapper .sections .vertical .section5 .contact .light_box h2 {
-  font-size: 4rem;
+.wrapper .sections .vertical .section5 .light_box h2 {
+  font-size: 3.5rem;
   cursor: pointer;
-  width: 49%;
   transition: 1s;
 }
-.wrapper .sections .vertical .section5 .contact .light_box h2:hover ~ img {
+.wrapper .sections .vertical .section5 .light_box h2:hover ~ img {
   animation: bulb 2s ease infinite 2s;
 }
-@keyframes wave {
-  100% {
-    background-position-x: 50%;
-    background-size: 20%;
-    font-size: 4.1rem;
-  }
-}
-.wrapper .sections .vertical .section5 .contact .light_box img {
+.wrapper .sections .vertical .section5 .light_box img {
   position: absolute;
   transition: 0.5s;
   cursor: pointer;
 }
-.wrapper .sections .vertical .section5 .contact .light_box img:first-of-type {
+.wrapper .sections .vertical .section5 .light_box img:first-of-type {
   width: 5%;
   top: -10%;
   left: 42%;
   opacity: 1;
 }
-.wrapper .sections .vertical .section5 .contact .light_box img:not(:first-of-type) {
+.wrapper .sections .vertical .section5 .light_box img:not(:first-of-type) {
   width: 0.5%;
   opacity: 1;
   height: 21.5px;
 }
-.wrapper .sections .vertical .section5 .contact .light_box img:nth-of-type(2) {
+.wrapper .sections .vertical .section5 .light_box img:nth-of-type(2) {
   top: -15%;
   left: 40%;
   transform: rotate(-20deg);
 }
-.wrapper .sections .vertical .section5 .contact .light_box img:nth-of-type(3) {
+.wrapper .sections .vertical .section5 .light_box img:nth-of-type(3) {
   top: -17%;
   left: 46%;
   transform: rotate(20deg);
 }
-.wrapper .sections .vertical .section5 .contact .light_box img:last-of-type {
+.wrapper .sections .vertical .section5 .light_box img:last-of-type {
   top: -10%;
   left: 50%;
   transform: rotate(60deg);
@@ -586,43 +566,19 @@ html {
     opacity: 1;
   }
 }
-.wrapper .sections .vertical .section5 .contact .line {
-  width: 40%;
+.wrapper .sections .vertical .section5 .line {
+  width: 27%;
   height: 4px;
-  background: #fe6a6a;
+  background: #ddd9d8;
   border-radius: 10px;
   position: absolute;
-  top: 18%;
+  top: 0;
   left: 2%;
 }
-.wrapper .sections .vertical .section5 .contact .line2 {
-  width: 42%;
-  top: 20%;
+.wrapper .sections .vertical .section5 .line2 {
+  width: 30%;
+  top: 36%;
   left: 0%;
-}
-.wrapper .sections .vertical .section5 .contact p {
-  font-size: 2rem;
-}
-.wrapper .sections .vertical .section5 .contact .sns {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 100px;
-}
-.wrapper .sections .vertical .section5 .contact .sns > a {
-  display: inline-block;
-  width: 35%;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  color: #fe6a6a;
-}
-.wrapper .sections .vertical .section5 .contact .sns > a i {
-  font-size: 2rem;
-  width: 100%;
-}
-.wrapper .sections .vertical .section5 .contact .sns > a p {
-  width: 100%;
 }
 .wrapper .sections .horizontal {
   width: 300%;
@@ -631,77 +587,99 @@ html {
   background: #e7dcc0;
 }
 .wrapper .sections .horizontal .section2 {
-  background: #e7dcc0;
   overflow: hidden;
 }
 .wrapper .sections .horizontal .section2 > div {
   position: absolute;
-  color: #ddd9d8;
   font-family: "Lilita One", sans-serif;
-  box-shadow: 0px 0px 20px rgba(95, 95, 95, 0.2);
 }
-.wrapper .sections .horizontal .section2 > div:first-of-type, .wrapper .sections .horizontal .section2 > div:nth-of-type(3), .wrapper .sections .horizontal .section2 > div:last-of-type {
-  background: #e7dcc0;
-  top: -8%;
-  border-bottom: 1px solid #333;
+.wrapper .sections .horizontal .section2 > div:first-of-type, .wrapper .sections .horizontal .section2 > div:last-of-type {
+  background: #7b9d7c;
 }
 .wrapper .sections .horizontal .section2 > div:first-of-type {
-  width: 20%;
-  height: 81.1%;
-  transform: perspective(300px) rotateY(20deg);
+  width: 479px;
+  height: 511px;
+  top: 0;
   left: 0;
+  position: relative;
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
 }
-.wrapper .sections .horizontal .section2 > div:nth-of-type(3) {
-  width: 17%;
-  height: 60.51%;
-  transform: perspective(300px) rotateY(35deg);
-  left: 47.3%;
+.wrapper .sections .horizontal .section2 > div:first-of-type img:first-of-type {
+  width: 37%;
+  position: absolute;
+  top: 270px;
+  right: 40px;
+  border: 5px solid #b3ceb3;
+  border-radius: 50px;
 }
-.wrapper .sections .horizontal .section2 > div.info, .wrapper .sections .horizontal .section2 > div.skill {
-  background: #333;
+.wrapper .sections .horizontal .section2 > div:first-of-type img:last-of-type {
+  width: 45%;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  border: 5px solid #b3ceb3;
+  border-radius: 50px;
+}
+.wrapper .sections .horizontal .section2 > div:nth-of-type(2) {
+  background: #68918c;
+  width: 150px;
+  height: 585px;
+  transform: perspective(500px) rotateY(-70deg);
+  left: 26.6rem;
+  top: -2.3rem;
+  border-bottom: 1px solid #5f4b00;
 }
 .wrapper .sections .horizontal .section2 > div.info {
-  width: 28%;
-  height: 66%;
+  background: #75aca6;
+  width: 1200px;
+  height: 597px;
   top: 0;
-  left: 17.75%;
-  padding: 40px 70px;
+  right: 10.75rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 70px 0 100px;
+  border: 1px solid #5f4b00;
+  border-top: none;
+}
+.wrapper .sections .horizontal .section2 > div.info h2 {
+  color: #5f4b00;
+}
+.wrapper .sections .horizontal .section2 > div.info p, .wrapper .sections .horizontal .section2 > div.info a, .wrapper .sections .horizontal .section2 > div.info i, .wrapper .sections .horizontal .section2 > div.info span {
+  color: #e7dcc0;
 }
 .wrapper .sections .horizontal .section2 > div.info .hidden_info {
   display: none;
 }
 .wrapper .sections .horizontal .section2 > div.info .visible_info {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   display: block;
 }
 .wrapper .sections .horizontal .section2 > div.info .visible_info img {
-  width: 50%;
+  width: 20%;
   padding-bottom: 20px;
 }
 .wrapper .sections .horizontal .section2 > div.info .visible_info h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   padding-bottom: 20px;
 }
 .wrapper .sections .horizontal .section2 > div.info .visible_info p {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   opacity: 0;
   font-family: "GmarketSansMedium";
 }
-.wrapper .sections .horizontal .section2 > div.skill {
-  width: 22%;
-  height: 45.3%;
-  top: 0;
-  right: 16.9%;
-  padding: 40px;
+.wrapper .sections .horizontal .section2 > div.info .skill {
+  width: 45%;
+  height: 75%;
 }
-.wrapper .sections .horizontal .section2 > div.skill h2 {
-  font-size: 2.5rem;
+.wrapper .sections .horizontal .section2 > div.info .skill h2 {
+  font-size: 3rem;
   padding-bottom: 30px;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -710,7 +688,7 @@ html {
   opacity: 0;
   transition: 2s;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div {
   width: 30%;
   font-size: 1.3rem;
   display: flex;
@@ -718,58 +696,99 @@ html {
   justify-content: center;
   margin-bottom: 20px;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div i {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div i {
   font-size: 2rem;
   width: 100%;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div span {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div span {
   display: inline-block;
   width: 100%;
   font-size: 0.9rem;
   align-self: flex-end;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div img {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div img {
   width: 100%;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(5) img {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(5) img {
   width: 50%;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(8) img {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(8) img {
   width: 45%;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(9) img {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(9) img {
   width: 25%;
   border-radius: 3px;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(10) img {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(10) img {
   width: 26%;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:nth-of-type(11) img {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:nth-of-type(11) img {
   width: 25%;
 }
-.wrapper .sections .horizontal .section2 > div.skill .skill_box > div:last-of-type img {
+.wrapper .sections .horizontal .section2 > div.info .skill .skill_box > div:last-of-type img {
   width: 40%;
 }
+.wrapper .sections .horizontal .section2 > div.info .contact {
+  width: 60%;
+  height: 25%;
+  position: absolute;
+  bottom: 5rem;
+  left: 100px;
+}
+.wrapper .sections .horizontal .section2 > div.info .contact h2 {
+  font-size: 3.5rem;
+  padding-bottom: 20px;
+}
+.wrapper .sections .horizontal .section2 > div.info .contact p {
+  font-size: 1.2rem;
+}
+.wrapper .sections .horizontal .section2 > div.info .sns {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+}
+.wrapper .sections .horizontal .section2 > div.info .sns > p {
+  width: 100%;
+  font-size: 1.3rem;
+}
+.wrapper .sections .horizontal .section2 > div.info .sns > a {
+  display: inline-block;
+  width: 30%;
+  margin-right: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.wrapper .sections .horizontal .section2 > div.info .sns > a i {
+  font-size: 2rem;
+  width: 100%;
+}
+.wrapper .sections .horizontal .section2 > div.info .sns > a p {
+  width: 100%;
+}
 .wrapper .sections .horizontal .section2 > div:last-of-type {
-  width: 15%;
-  height: 65.3%;
-  right: 0;
-  top: -7.7%;
-  transform: perspective(300px) rotateY(-40deg);
-  border-bottom: 1px solid #333;
+  width: 200px;
+  height: 700px;
+  right: -2px;
+  top: -3.3rem;
+  transform: perspective(300px) rotateY(-30deg);
+  border-bottom: 1px solid #5f4b00;
 }
 .wrapper .sections .horizontal .project {
   display: flex;
   flex-wrap: wrap;
 }
-.wrapper .sections .horizontal .project > div:first-of-type {
-  display: block;
-  font-family: "GOSEONGGEUMGANGNURI";
+.wrapper .sections .horizontal .project > div:first-of-type:not(.node_txt) {
+  font-family: "Lilita One", sans-serif;
   overflow: hidden;
   cursor: pointer;
   position: relative;
 }
-.wrapper .sections .horizontal .project > div:first-of-type::after {
+.wrapper .sections .horizontal .project > div:first-of-type:not(.node_txt)::after {
   content: "Hover";
   display: inline-block;
   position: absolute;
@@ -781,16 +800,43 @@ html {
   transition: 1s;
   color: #f9a42d;
 }
-.wrapper .sections .horizontal .project > div:first-of-type:hover::after {
+.wrapper .sections .horizontal .project > div:first-of-type:not(.node_txt):hover::after {
   background: none;
   content: "Click to see more";
 }
-.wrapper .sections .horizontal .project > div:first-of-type img {
+.wrapper .sections .horizontal .project > div:first-of-type:not(.node_txt) img {
   width: 100%;
   transition: 5s;
 }
 .wrapper .sections .horizontal .project > div:last-of-type {
   font-family: "GmarketSansMedium";
+  background: #eee;
+  border-top: 3px outset #ccc;
+  padding: 15px;
+  border-left: 3px outset #ccc;
+  position: relative;
+  box-shadow: 5px 5px rgba(95, 95, 95, 0.2);
+}
+.wrapper .sections .horizontal .project > div:last-of-type h5 {
+  width: 100%;
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .project > div:last-of-type h6 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+.wrapper .sections .horizontal .project > div:last-of-type p {
+  position: absolute;
+}
+.wrapper .sections .horizontal .project > div:last-of-type p:first-of-type {
+  bottom: 30px;
+  right: 15px;
+  font-size: 0.5rem;
+}
+.wrapper .sections .horizontal .project > div:last-of-type p:last-of-type {
+  bottom: 15px;
+  right: 15px;
+  font-size: 0.6rem;
 }
 .wrapper .sections .horizontal .section3 {
   perspective: 1000px;
@@ -800,203 +846,142 @@ html {
   position: absolute;
   bottom: 10%;
   transition: 0.5s;
-  z-index: 500;
+  z-index: 10;
   display: block;
 }
 .wrapper .sections .horizontal .section3 > div {
   position: absolute;
   display: flex;
   align-items: center;
-}
-.wrapper .sections .horizontal .section3 > div:first-of-type {
-  width: 48%;
-  height: 73%;
-  background: #7b9d7c;
-  top: -4%;
-  left: 3.5%;
+  min-width: 1933px;
+  min-height: 763px;
+  width: 101.6%;
+  height: 75.5%;
+  padding: 0 130px 0 80px;
+  background: #b3ceb3;
+  top: -5.3rem;
+  left: 9rem;
   transform: rotateY(10deg);
-  border-bottom: 1px solid #333;
-  border-left: 1px solid #333;
-  border-right: 2px solid #333;
-  justify-content: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #5f4b00;
+  border-left: 1px solid #5f4b00;
+  border-right: 2px solid #5f4b00;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project {
-  width: 70%;
-  height: 70%;
+.wrapper .sections .horizontal .section3 > div .project:first-of-type {
+  width: 450px;
+  height: 85%;
   align-content: flex-end;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type {
-  width: 500px;
-  height: 284px;
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div.seeMore {
+  width: 100%;
+  height: 255px;
   margin-bottom: 20px;
   border: 10px ridge #53453a;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type::after {
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div.seeMore::after {
   padding: 24% 43%;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type:hover::after {
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div.seeMore:hover::after {
   padding: 24% 30%;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:first-of-type:hover img {
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div.seeMore:hover img {
   transform: translateY(-85.5%);
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type {
-  width: 230px;
-  height: 150px;
-  background: #eee;
-  border-top: 3px outset #ccc;
-  border-left: 3px outset #ccc;
-  position: relative;
-  padding: 20px;
-  box-shadow: 5px 5px rgba(95, 95, 95, 0.2);
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div:last-of-type {
+  width: 170px;
+  height: 125px;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type h4 {
-  padding-bottom: 10px;
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div:last-of-type h5 {
+  font-size: 0.75rem;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type h5 {
-  width: 100%;
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div:last-of-type h6 {
+  font-size: 0.6rem;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type h5:last-of-type {
-  border-bottom: 2px solid #333;
-  padding-bottom: 15px;
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div:last-of-type p:first-of-type {
+  font-size: 0.45rem;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type p {
-  position: absolute;
+.wrapper .sections .horizontal .section3 > div .project:first-of-type > div:last-of-type p:last-of-type {
+  font-size: 0.55rem;
 }
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type p:first-of-type {
-  bottom: 40px;
-  right: 20px;
-  font-size: 0.5rem;
-}
-.wrapper .sections .horizontal .section3 > div:first-of-type .project > div:last-of-type p:last-of-type {
-  bottom: 20px;
-  right: 20px;
-  font-size: 0.7rem;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type {
-  width: 54.3%;
-  height: 70.5%;
-  background: #b3ceb3;
-  top: -4.5%;
-  right: -4.85%;
-  border-bottom: 1px solid #333;
-  border-right: 2px solid #333;
-  transform: rotateY(10deg);
-  justify-content: center;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type {
-  width: 50%;
+.wrapper .sections .horizontal .section3 > div .project:nth-of-type(2) {
+  width: 500px;
   height: 60%;
   align-content: center;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type {
-  width: 330px;
-  height: 180px;
+.wrapper .sections .horizontal .section3 > div .project:nth-of-type(2) > div.seeMore {
+  width: 100%;
+  height: 260px;
   margin-bottom: 20px;
   border: 10px ridge #53453a;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type::after {
-  padding: 60px 150px;
+.wrapper .sections .horizontal .section3 > div .project:nth-of-type(2) > div.seeMore::after {
+  padding: 110px 220px;
   font-size: 1.4rem;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type:hover::after {
-  padding: 60px 120px;
+.wrapper .sections .horizontal .section3 > div .project:nth-of-type(2) > div.seeMore:hover::after {
+  padding: 110px 155px;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:first-of-type:hover img {
-  transform: translateY(-640px);
+.wrapper .sections .horizontal .section3 > div .project:nth-of-type(2) > div.seeMore:hover img {
+  transform: translateY(-78.8%);
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type {
-  width: 358px;
+.wrapper .sections .horizontal .section3 > div .project:nth-of-type(2) > div:last-of-type {
+  width: 200px;
+  height: 120px;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type h2 {
-  font-size: 1rem;
-  padding-bottom: 10px;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type p:first-of-type {
-  font-size: 0.6rem;
-  line-height: 20px;
-  width: 174px;
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type p:not(:first-of-type) {
-  font-size: 0.7rem;
-  line-height: 20px;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type p:last-of-type {
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:first-of-type > div:last-of-type a {
-  font-size: 0.7rem;
-  padding: 10px;
-  border-radius: 10px;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type {
-  width: 45%;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type {
+  width: 550px;
   height: 85%;
   align-content: flex-end;
-  padding-left: 40px;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a {
-  width: 300px;
-  height: 157px;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore {
+  width: 100%;
+  height: 280px;
   margin-bottom: 20px;
   border: 10px ridge #53453a;
-  position: relative;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a::after {
-  padding: 60px 120px;
-  font-size: 1.3rem;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore::after {
+  padding: 115px 240px;
+  font-size: 1.7rem;
+  z-index: 1;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a:hover::after {
-  padding: 60px 85px;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore:hover::after {
+  padding: 115px 170px;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a:hover > img:first-of-type {
-  opacity: 0;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore:hover > img:first-of-type {
+  z-index: -1;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a:hover > img:last-of-type {
-  opacity: 1;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore:hover > img:last-of-type {
+  z-index: 0;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a > img {
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore img {
   position: absolute;
   top: 0;
   left: 0;
   transition: 1s;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a > img:first-of-type {
-  opacity: 1;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore img:first-of-type {
+  z-index: 0;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > a > img:last-of-type {
-  opacity: 0;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div.seeMore img:last-of-type {
+  z-index: -1;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div {
-  width: 100%;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div:last-of-type {
+  width: 220px;
+  height: 130px;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div h2 {
-  font-size: 1rem;
-  padding-bottom: 10px;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div:last-of-type h5 {
+  font-size: 0.9rem;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div h2 sub {
-  font-size: 0.6rem;
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div:last-of-type h6 {
+  font-size: 0.75rem;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div p:first-of-type {
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div:last-of-type p:first-of-type {
   font-size: 0.55rem;
-  line-height: 20px;
-  margin-bottom: 20px;
-  width: 182px;
+  bottom: 35px;
 }
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div p:not(:first-of-type) {
-  font-size: 0.65rem;
-  line-height: 20px;
-  width: 315px;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div p:last-of-type {
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section3 > div:last-of-type .project:last-of-type > div a {
+.wrapper .sections .horizontal .section3 > div .project:last-of-type > div:last-of-type p:last-of-type {
   font-size: 0.7rem;
-  padding: 10px;
-  border-radius: 10px;
 }
 .wrapper .sections .horizontal .section4 {
   overflow: hidden;
@@ -1006,216 +991,270 @@ html {
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type {
-  width: 52.3%;
-  height: 70.2%;
+  justify-content: space-between;
+  min-width: 1932px;
+  min-height: 763px;
+  width: 101.5%;
+  height: 75.5%;
   background: #81c0b5;
-  top: -4.2%;
-  left: -4.8%;
-  border-bottom: 1px solid #333;
+  top: -5.3rem;
+  left: -10.85rem;
+  border-bottom: 1px solid #5f4b00;
   transform: rotateY(-10deg);
+  padding: 0 60px 0 100px;
 }
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type {
-  width: 45%;
-  height: 70%;
+.wrapper .sections .horizontal .section4 > div .project:first-of-type {
+  width: 470px;
+  height: 60%;
   align-content: flex-start;
-  padding-left: 0px;
 }
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a {
-  width: 360px;
-  height: 180px;
-  margin-bottom: 20px;
-  border: 10px ridge #53453a;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a::after {
-  padding: 60px 150px;
-  font-size: 1.4rem;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a:hover::after {
-  padding: 60px 120px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > a:hover img {
-  transform: translateY(-640px);
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div {
-  width: 82%;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div h2 {
-  font-size: 1rem;
-  padding-bottom: 10px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div p:first-of-type {
-  font-size: 0.6rem;
-  line-height: 20px;
-  width: 174px;
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div p:not(:first-of-type) {
-  font-size: 0.7rem;
-  line-height: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div p:last-of-type {
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:first-of-type > div a {
-  font-size: 0.7rem;
-  padding: 10px;
-  border-radius: 10px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type {
-  width: 30%;
-  height: 65%;
-  align-content: flex-end;
-  padding-left: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a {
-  width: 300px;
-  height: 174px;
-  margin-bottom: 20px;
-  border: 10px ridge #53453a;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a::after {
-  padding: 60px 120px;
-  font-size: 1.3rem;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a:hover::after {
-  padding: 60px 85px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > a:hover img {
-  transform: translateY(-910px);
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div {
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:first-of-type {
   width: 100%;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div h2 {
-  font-size: 1rem;
-  padding-bottom: 10px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div p:first-of-type {
-  font-size: 0.55rem;
-  line-height: 20px;
-  margin-bottom: 20px;
-  width: 182px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div p:not(:first-of-type) {
-  font-size: 0.65rem;
-  line-height: 20px;
-  width: 315px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div p:last-of-type {
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:first-of-type .project:last-of-type > div a {
-  font-size: 0.7rem;
-  padding: 10px;
-  border-radius: 10px;
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type {
-  width: 50.4%;
-  height: 72.7%;
-  background: #75aca6;
-  top: -4%;
-  right: 3.3%;
-  border-bottom: 1px solid #333;
-  border-left: 1px solid #333;
-  transform: rotateY(-8deg);
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type {
-  width: 45%;
-  height: 70%;
-  align-content: flex-start;
-  padding-left: 0px;
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a {
-  width: 360px;
-  height: 180px;
+  height: 245px;
   margin-bottom: 20px;
   border: 10px ridge #53453a;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a::after {
-  padding: 60px 150px;
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:first-of-type::after {
+  padding: 105px 195px;
+  font-size: 1.5rem;
+}
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:first-of-type:hover::after {
+  padding: 105px 140px;
+}
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:last-of-type {
+  width: 220px;
+  height: 130px;
+}
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:last-of-type h5 {
+  font-size: 1rem;
+}
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:last-of-type h6 {
+  font-size: 0.8rem;
+}
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:last-of-type p:first-of-type {
+  font-size: 0.55rem;
+  bottom: 35px;
+}
+.wrapper .sections .horizontal .section4 > div .project:first-of-type > div:last-of-type p:last-of-type {
+  font-size: 0.7rem;
+}
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(2) {
+  width: 420px;
+  height: 80%;
+  align-content: flex-end;
+}
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(2) > div:first-of-type {
+  width: 100%;
+  height: 230px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+}
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(2) > div:first-of-type::after {
+  padding: 90px 175px;
   font-size: 1.4rem;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a:hover::after {
-  padding: 60px 120px;
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(2) > div:first-of-type:hover::after {
+  padding: 90px 125px;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > a:hover img {
-  transform: translateY(-640px);
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(2) > div:first-of-type:hover img {
+  transform: translateY(-67%);
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div {
-  width: 82%;
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(2) > div:last-of-type {
+  width: 200px;
+  height: 120px;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div h2 {
-  font-size: 1rem;
-  padding-bottom: 10px;
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(3) {
+  width: 370px;
+  height: 50%;
+  align-content: flex-start;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div p:first-of-type {
-  font-size: 0.6rem;
-  line-height: 20px;
-  width: 174px;
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div p:not(:first-of-type) {
-  font-size: 0.7rem;
-  line-height: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div p:last-of-type {
-  margin-bottom: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:first-of-type > div a {
-  font-size: 0.7rem;
-  padding: 10px;
-  border-radius: 10px;
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type {
-  width: 30%;
-  height: 65%;
-  align-content: flex-end;
-  padding-left: 20px;
-}
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a {
-  width: 300px;
-  height: 174px;
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(3) > div:first-of-type {
+  width: 100%;
+  height: 185px;
   margin-bottom: 20px;
   border: 10px ridge #53453a;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a::after {
-  padding: 60px 120px;
-  font-size: 1.3rem;
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(3) > div:first-of-type::after {
+  padding: 70px 145px;
+  font-size: 1.4rem;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a:hover::after {
-  padding: 60px 85px;
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(3) > div:first-of-type:hover::after {
+  padding: 70px 100px;
+}
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(3) > div:first-of-type:hover img {
+  transform: translateY(-80.5%);
+}
+.wrapper .sections .horizontal .section4 > div .project:nth-of-type(3) > div:last-of-type {
+  width: 190px;
+  height: 120px;
+}
+.wrapper .sections .horizontal .section4 > div .project:last-of-type {
+  width: 330px;
+  height: 65%;
+  align-content: flex-end;
+}
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > a {
+  display: block;
+  width: 100%;
+  height: 187px;
+  margin-bottom: 20px;
+  border: 10px ridge #53453a;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  font-family: "Lilita One", sans-serif;
+}
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > a::after {
+  content: "Hover";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 1s;
+  color: #f9a42d;
+  padding: 75px 130px;
+  font-size: 1.2rem;
+}
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > a:hover::after {
+  background: none;
+  padding: 75px 100px;
   content: "click to video";
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > a video {
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > a video {
   width: 100%;
   display: block;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div {
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > div {
+  width: 170px;
+  height: 110px;
+}
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > div h5 {
+  font-size: 0.8rem;
+}
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > div h6 {
+  font-size: 0.6rem;
+}
+.wrapper .sections .horizontal .section4 > div .project:last-of-type > div p:first-of-type {
+  font-size: 0.45rem;
+  bottom: 15px;
+}
+
+.pj_infoWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 0;
+  z-index: 20;
+  transition: 1s;
+  font-family: "GmarketSansMedium";
+  transition: 1s;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div h2 {
-  font-size: 1rem;
+.pj_infoWrap .pj_box {
+  border: 2px solid #5f4b00;
+  width: 700px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #5f4b00;
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.pj_infoWrap .pj_box h2 {
+  font-size: 4rem;
+  font-family: "RixInooAriDuriR";
+  width: 80%;
+}
+.pj_infoWrap .pj_box h3 {
   padding-bottom: 10px;
+  width: 80%;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div p:first-of-type {
-  font-size: 0.55rem;
-  line-height: 20px;
-  margin-bottom: 20px;
-  width: 182px;
+.pj_infoWrap .pj_box img {
+  width: 80%;
+  padding-bottom: 20px;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div p:not(:first-of-type) {
-  font-size: 0.65rem;
-  line-height: 20px;
-  width: 315px;
+.pj_infoWrap .pj_box p {
+  line-height: 1.5rem;
+  width: 80%;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div p:last-of-type {
-  margin-bottom: 20px;
+.pj_infoWrap .pj_box p:last-of-type {
+  padding-bottom: 20px;
 }
-.wrapper .sections .horizontal .section4 > div:last-of-type .project:last-of-type > div a {
-  font-size: 0.7rem;
-  padding: 10px;
-  border-radius: 10px;
+.pj_infoWrap .pj_box input[type=button] {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid #5f4b00;
+  color: #5f4b00;
+  padding: 7px 7px 2px;
+  font-family: "GmarketSansMedium";
+  transition: 0.5s;
+}
+.pj_infoWrap .pj_box input[type=button]:hover {
+  opacity: 0.5;
+}
+.pj_infoWrap .pj_box > div:first-of-type {
+  width: 80%;
+  display: flex;
+  padding-bottom: 50px;
+}
+.pj_infoWrap .pj_box > div:first-of-type span {
+  display: inline-block;
+  border: 2px solid #5f4b00;
+  padding: 7px 7px 5px;
+  margin-right: 20px;
+}
+.pj_infoWrap .pj_box > div:last-of-type {
+  width: 80%;
+  height: 50px;
+}
+.pj_infoWrap .pj_box > div:last-of-type a {
+  position: relative;
+  color: #5f4b00;
+}
+.pj_infoWrap .pj_box > div:last-of-type a:first-of-type::after {
+  content: "View site";
+}
+.pj_infoWrap .pj_box > div:last-of-type a:first-of-type i:first-of-type {
+  font-size: 2.3rem;
+}
+.pj_infoWrap .pj_box > div:last-of-type a:first-of-type i:last-of-type {
+  font-size: 2rem;
+  left: 30px;
+  top: 15px;
+}
+.pj_infoWrap .pj_box > div:last-of-type a:last-of-type {
+  left: 100px;
+}
+.pj_infoWrap .pj_box > div:last-of-type a:last-of-type::after {
+  content: "View document";
+}
+.pj_infoWrap .pj_box > div:last-of-type a::after {
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.pj_infoWrap .pj_box > div:last-of-type a i {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pj_infoWrap .pj_box > div:last-of-type a:hover i {
+  opacity: 0;
+}
+.pj_infoWrap .pj_box > div:last-of-type a:hover::after {
+  opacity: 1;
 }

@@ -117,12 +117,12 @@ $(window).scroll(function () {
         $('.top_ticket').css({
             position: 'fixed', top: `${currentScrollTop + 250}px`,
             transform: `rotate(-300deg) scale(${ticketScale + (currentScrollTop * 0.001)})`,
-            marginLeft: `-${currentScrollTop - 800}px`
+            marginLeft: `-${currentScrollTop - 790}px`
         });
 
         $('.bottom_ticket').css({
             position: 'fixed', top: `${currentScrollTop + 250}px`, transform: `rotate(0deg) scale(${ticketScale + (currentScrollTop * 0.002)})`,
-            marginLeft: `${currentScrollTop - 800}px`
+            marginLeft: `${currentScrollTop - 790}px`
         });
 
     }
@@ -138,12 +138,12 @@ $(window).scroll(function () {
 
 
     // ticket 구멍 색 변함
-    if(currentScrollTop < 750){
-        $('.bottom_ticket').find('h6').children('i').css({color:'#02554b'})
-    }
-    else if(750 < currentScrollTop){
-        $('.bottom_ticket').find('h6').children('i').css({color:'#7b9d7c'})
-    }
+    // if(currentScrollTop < 750){
+    //     $('.bottom_ticket').find('h6').children('i').css({color:'#02554b'})
+    // }
+    // else if(750 < currentScrollTop){
+    //     $('.bottom_ticket').find('h6').children('i').css({color:'#7b9d7c'})
+    // }
 
     // 입구 이미지
     if(2900 > currentScrollTop){

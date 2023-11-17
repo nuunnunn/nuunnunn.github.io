@@ -2,13 +2,15 @@
 
 $backCL: #02554b;
 $backCL2: #81c0b5;
+$backCL3: #e7dcc0;
 // $backCL2: #04a7ba;
 
 $mainCL: #f9a42d;
 $mainCL2: #fe4818;
 
-// $subCL: #fed4d5;
 $subCL: #fe6a6a;
+$subCL2: #5f4b00;
+$subCL3: #fed4d5;
 
 @mixin solid($width, $color){
     border: $width solid $color;
@@ -32,13 +34,13 @@ $subCL: #fe6a6a;
 }
 @mixin rix{ font-family: 'RixInooAriDuriR'};
 
-@font-face {
-    font-family: 'GOSEONGGEUMGANGNURI';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-@mixin goseong{font-family: 'GOSEONGGEUMGANGNURI';}
+// @font-face {
+//     font-family: 'GOSEONGGEUMGANGNURI';
+//     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2') format('woff2');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// @mixin goseong{font-family: 'GOSEONGGEUMGANGNURI';}
 
 
 //main

@@ -501,10 +501,10 @@ html {
 .wrapper .sections .vertical .section5 .light_box {
   width: 540px;
   height: 455px;
+  color: #f9a42d;
 }
 .wrapper .sections .vertical .section5 .light_box > h2 {
   font-size: 5rem;
-  color: #f9a42d;
   text-align: right;
   cursor: pointer;
   transition: 1s;
@@ -556,6 +556,20 @@ html {
   100% {
     opacity: 1;
   }
+}
+.wrapper .sections .vertical .section5 .light_box .source {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+.wrapper .sections .vertical .section5 .light_box .source p {
+  font-family: "RixInooAriDuriR";
+}
+.wrapper .sections .vertical .section5 .light_box .source a {
+  color: #f9a42d;
+  text-decoration: underline;
 }
 .wrapper .sections .vertical .section5 .hobby {
   width: calc(100% - 650px);

@@ -200,8 +200,8 @@
             .section5 { background: $backCL; display: flex; justify-content: space-between; align-items: center;
                 padding: 100px 0 0 100px; @include lilita;         
 
-                .light_box{width: 540px; height: 455px;
-                    &>h2{ font-size: 5rem; color: $mainCL; text-align: right; cursor: pointer; transition: 1s;
+                .light_box{width: 540px; height: 455px; color: $mainCL;
+                    &>h2{ font-size: 5rem; text-align: right; cursor: pointer; transition: 1s;
                         &:hover ~ img{animation: bulb 2s ease infinite;}    
                         span{color: $mainCL2;}
                     }
@@ -217,6 +217,11 @@
                             50%{opacity: 0.5;}
                             100%{opacity: 1;}
                         }
+                    }
+
+                    .source{width: 100px; height: 100px; position: absolute; bottom: 50px; left: 50px;
+                        p{@include rix;}
+                        a{color: $mainCL; text-decoration: underline;}
                     }
                 }                
 

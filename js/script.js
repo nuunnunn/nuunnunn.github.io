@@ -57,9 +57,11 @@ popClose.forEach((e,i)=>{
 
 
 const imgSlide = ()=>{
+    $('.hSlide').children('img').eq(2).css({marginTop:'100px', border: '5px solid #fe6a6a'});
     $('.hSlide').stop().animate({marginLeft: '-365px'},1000,()=>{
         $('.hSlide').children('img').eq(0).appendTo('.hSlide');
-        $('.hSlide').css({marginLeft: 0})
+        $('.hSlide').css({marginLeft: 0});
     });
+    $('.hSlide').children('img').eq(1).css({marginTop:'0px', border: '5px solid #fed4d5'});
 }
-setInterval(imgSlide,2000);
+setInterval(imgSlide,3000);

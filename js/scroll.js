@@ -136,6 +136,16 @@ $(window).scroll(function () {
         }
     }
 
+    let hiSun = document.querySelector('.hiSun');
+    if(2800 < currentScrollTop && currentScrollTop < 4700){
+        hiSun.style.right = '-100px';
+        // hiSun.style.opacity = 1;
+    }
+    else if(currentScrollTop < 2800 || 4700 < currentScrollTop){
+        hiSun.style.right = '-200px';
+        // hiSun.style.opacity = 0;    
+    }
+
 
     // ticket 구멍 색 변함
     // if(currentScrollTop < 750){
@@ -144,11 +154,4 @@ $(window).scroll(function () {
     // else if(750 < currentScrollTop){
     //     $('.bottom_ticket').find('h6').children('i').css({color:'#7b9d7c'})
     // }
-
-    // 입구 이미지
-    if(2900 > currentScrollTop){
-        $('.hiSun').stop().fadeIn();
-    }else if(2900 < currentScrollTop){
-        $('.hiSun').stop().fadeOut();
-    }
 });

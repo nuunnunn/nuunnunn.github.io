@@ -558,7 +558,7 @@ html {
   }
 }
 .wrapper .sections .vertical .section5 .hobby {
-  width: calc(100% - 730px);
+  width: calc(100% - 650px);
   height: 850px;
 }
 .wrapper .sections .vertical .section5 .hobby .line_box {
@@ -583,39 +583,40 @@ html {
 .wrapper .sections .vertical .section5 .hobby .line_box h2 {
   font-size: 3.5rem;
   color: #fe4818;
+  cursor: pointer;
 }
 .wrapper .sections .vertical .section5 .hobby p {
   font-family: "GmarketSansMedium";
   color: #f9a42d;
   padding-bottom: 50px;
 }
-.wrapper .sections .vertical .section5 .line {
-  width: 220px;
+.wrapper .sections .vertical .section5 .hobby .line {
+  width: 230px;
   height: 4px;
   background: #f9a42d;
   border-radius: 10px;
   position: absolute;
   top: 13rem;
-  left: 52rem;
+  left: 47rem;
 }
-.wrapper .sections .vertical .section5 .line2 {
-  width: 240px;
+.wrapper .sections .vertical .section5 .hobby .line2 {
+  width: 250px;
   top: 14rem;
-  left: 52rem;
+  left: 46rem;
 }
-.wrapper .sections .vertical .section5 .hobbySlideWrap {
+.wrapper .sections .vertical .section5 .hobby .hobbySlideWrap {
   width: 100%;
   height: calc(100% - 215px);
   overflow: hidden;
 }
-.wrapper .sections .vertical .section5 .hobbySlideWrap .hSlide {
+.wrapper .sections .vertical .section5 .hobby .hobbySlideWrap .hSlide {
   width: 739%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.wrapper .sections .vertical .section5 .hobbySlideWrap .hSlide img {
+.wrapper .sections .vertical .section5 .hobby .hobbySlideWrap .hSlide img {
   width: 350px;
   border: 5px solid #fed4d5;
   border-radius: 50px;
@@ -813,13 +814,20 @@ html {
 .wrapper .sections .horizontal .section2 > div.info .sns > a p {
   width: 100%;
 }
-.wrapper .sections .horizontal .section2 > div:last-of-type {
+.wrapper .sections .horizontal .section2 > div:nth-of-type(4) {
   width: 200px;
   height: 700px;
   right: -2px;
   top: -3.3rem;
   transform: perspective(300px) rotateY(-30deg);
   border-bottom: 1px solid #5f4b00;
+}
+.wrapper .sections .horizontal .section2 > img {
+  width: 200px;
+  position: absolute;
+  bottom: 100px;
+  right: -200px;
+  transition: 1s;
 }
 .wrapper .sections .horizontal .project {
   display: flex;
@@ -922,11 +930,11 @@ html {
   border: 10px ridge #53453a;
 }
 .wrapper .sections .horizontal .section3 > div .project:first-of-type > div.seeMore::after {
-  padding: 24% 43%;
+  padding: 25% 45%;
   font-size: 1.3rem;
 }
 .wrapper .sections .horizontal .section3 > div .project:first-of-type > div.seeMore:hover::after {
-  padding: 24% 30%;
+  padding: 25% 35%;
 }
 .wrapper .sections .horizontal .section3 > div .project:first-of-type > div.seeMore:hover img {
   transform: translateY(-85.5%);

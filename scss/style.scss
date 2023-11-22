@@ -178,13 +178,6 @@
                 i{font-size: 3rem;}
             }
         }
-
-
-        // .ambition{width: 100%; font-family: 'GangwonEduSaeeum_OTFMediumA'; font-size: 2rem; 
-        //     position: absolute; bottom: 15%; left: 0; text-align: center; display: none;
-
-        //     span{color: $subCL2;}
-        // }
     }
 
 }
@@ -227,7 +220,7 @@
                     }
                 }                
 
-                .hobby{width: calc(100% - 730px); height: 850px;                        
+                .hobby{width: calc(100% - 650px); height: 850px;                        
                                     
                     .line_box{width: 245px; height: 70px; margin-bottom: 50px;
                         &:hover ~ .line{animation: line 2s 1;}
@@ -237,19 +230,17 @@
                             100%{width: 220px;}
                         }
                             
-                        h2{ font-size: 3.5rem; color: $mainCL2; }
+                        h2{ font-size: 3.5rem; color: $mainCL2; cursor: pointer;}
                     }
                     p{ @include gm; color: $mainCL; padding-bottom: 50px;}
-                }
         
-                .line{width: 220px; height: 4px; background: $mainCL; border-radius: 10px; 
-                position: absolute; top: 13rem; left: 52rem; }
-                .line2{width: 240px; top: 14rem; left: 52rem;}
-
-                .hobbySlideWrap{width: 100%; height: calc(100% - 215px); overflow: hidden;
-                    .hSlide{width: 739%; height: 100%; display: flex; justify-content: space-between; align-items: flex-start;
-                        img{width: 350px; @include solid(5px,$subCL3); border-radius: 50px;
-                            // &:nth-of-type(2){margin-top: 100px; @include solid(5px,$subCL);}
+                    .line{width: 230px; height: 4px; background: $mainCL; border-radius: 10px; 
+                    position: absolute; top: 13rem; left: 47rem; }
+                    .line2{width: 250px; top: 14rem; left: 46rem;}
+    
+                    .hobbySlideWrap{width: 100%; height: calc(100% - 215px); overflow: hidden;
+                        .hSlide{width: 739%; height: 100%; display: flex; justify-content: space-between; align-items: flex-start;
+                            img{width: 350px; @include solid(5px,$subCL3); border-radius: 50px;}
                         }
                     }
                 }
@@ -332,10 +323,13 @@
                         }
                     }
                     
-                    &:last-of-type{width: 200px; height: 700px; right: -2px; top: -3.3rem; 
+                    &:nth-of-type(4){width: 200px; height: 700px; right: -2px; top: -3.3rem; 
                         transform: perspective(300px) rotateY(-30deg); border-bottom: 1px solid $subCL2;
                     }
                 }
+
+                &>img{width: 200px; position: absolute; bottom: 100px; right: -200px;
+                transition: 1s;}
             } 
 
 
@@ -382,8 +376,8 @@
                             &>div{
                                 &.seeMore{ width: 100%; height: 255px; margin-bottom: 20px; border: 10px ridge #53453a;
 
-                                    &::after{ padding: 24% 43%; font-size: 1.3rem; }                                        
-                                    &:hover::after{ padding: 24% 30%;}
+                                    &::after{ padding: 25% 45%; font-size: 1.3rem; }                                        
+                                    &:hover::after{ padding: 25% 35%;}
                                     &:hover img{transform: translateY(-85.5%);}
                                 }
 
